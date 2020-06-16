@@ -1,13 +1,12 @@
 ---
 templateKey: blog-post
 title: Code Complete Part 1 Notes
-date: 2020-06-16T15:04:10.000Z
+date: 2020-06-16T17:04:10.000Z
 featuredpost: true
-featuredimage: /img/profile.png
-description: I'm working my way through the second edition of Code Complete by Steve McConnell. Here are my notes from Part 1 Laying the Foundation.
+featuredimage: /img/code-complete-part1.png
 tags:
   - codeComplete
-  - software construction
+  - software development
 ---
 
 I'm working my way through the second edition of *Code Complete* by Steve McConnell. Here are my notes from **Part 1: Laying the Foundation**.
