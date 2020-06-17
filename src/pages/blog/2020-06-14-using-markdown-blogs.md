@@ -5,7 +5,8 @@ date: 2020-06-14T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/markdown-vscode.png
 tags:
-  - command line
+  - blogging
+  - coding
 ---
 
 Why Use Markdown?

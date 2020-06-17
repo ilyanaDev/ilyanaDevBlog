@@ -7,6 +7,7 @@ featuredimage: /img/code-complete-part1.png
 tags:
   - codeComplete
   - software development
+  - coding
 ---
 
 I'm working my way through the second edition of *Code Complete* by Steve McConnell. Here are my notes from **Part 1: Laying the Foundation**.

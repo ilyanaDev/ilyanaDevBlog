@@ -6,6 +6,7 @@ featuredpost: false
 featuredimage: /img/setting-up-github.png
 tags:
   - setup
+  - GitHub
 ---
 
 What is GitHub?
