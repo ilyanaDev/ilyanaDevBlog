@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Code Complete Part 1 Notes
-date: 2020-06-16T17:04:10.000Z
+date: 2020-06-15T17:04:10.000Z
 featuredpost: true
 featuredimage: /img/code-complete-part1.png
 tags:

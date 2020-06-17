@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Using Markdown in VS Code
-date: 2020-06-16T15:04:10.000Z
+date: 2020-06-14T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/markdown-vscode.png
 tags:
@@ -31,7 +31,7 @@ Challenges and Solutions
 
 From here, you're all set to use VS Code to write Markdown. However, here are a few challenges I faced and how I solved them:
 
-* VS Code is not recognizing my txt file as Markdown, and so it will not lint (search for errors in) it. Solution: At the bottom right of your VS Code Window, you'll probably see the word "Plaintext" if you're having this issue. Click that word, and a **Select Language Mode** bar pops up at the top of your screen. Type in "Markdown" and select it from the dropdown menu, and you should be all set. "Plaintext" at the bottom of your screen should be changed to "Markdown."
+* VS Code is not recognizing my txt file as Markdown, and so it will not lint (search for errors in) it. Solution: At the bottom right of your VS Code Window, you'll probably see the word "Plaintext" if you're having this issue. Click that word, and a **Select Language Mode** bar pops up at the top of your screen. Type in "Markdown" and select it from the dropdown menu, and you should be all set. "Plaintext" at the bottom of your screen should now have changed to "Markdown."
 
 ![VS Code Plaintext](/img/vscode-plaintext.png "VS Code Plaintext")
 

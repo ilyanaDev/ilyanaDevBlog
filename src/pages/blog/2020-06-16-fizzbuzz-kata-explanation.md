@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: The FizzBuzz kata step-by-step
+title: The FizzBuzz Kata Step-By-Step
 date: 2020-06-16T17:04:10.000Z
 featuredpost: true
 featuredimage: /img/fizzbuzz.png

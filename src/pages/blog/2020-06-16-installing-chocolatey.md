@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Installing Chocolatey
-date: 2020-06-16T15:04:10.000Z
+date: 2020-06-12T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/install-chocolatey.png
 tags:

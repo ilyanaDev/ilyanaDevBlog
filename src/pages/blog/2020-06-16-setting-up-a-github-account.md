@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Setting up a GitHub Account
-date: 2020-06-16T15:04:10.000Z
+date: 2020-06-06T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/setting-up-github.png
 tags:
