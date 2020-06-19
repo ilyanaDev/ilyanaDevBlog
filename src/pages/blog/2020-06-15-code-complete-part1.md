@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Code Complete Part 1 Notes
 date: 2020-06-15T17:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/code-complete-part1.png
 tags:
   - codeComplete
@@ -11,6 +11,8 @@ tags:
 ---
 
 I'm working my way through the second edition of *Code Complete* by Steve McConnell. Here are my notes from **Part 1: Laying the Foundation**.
+
+Part 1 includes chapters 1-4: Welcome to Software Construction, Metaphors for a Richer Understanding of Software Development, Measure Twice Cut Once: Upstream Prerequisites, and Key Construction Decisions.
 
 1\. Welcome to Software Construction
 --

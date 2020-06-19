@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Creating a Gatsby Blog with Netlify
-date: 2020-06-17T15:04:10.000Z
+date: 2020-06-17T15:07:10.000Z
 featuredpost: true
 featuredimage: /img/creating-gatsby-blog-netlify.png
 tags:
