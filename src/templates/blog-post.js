@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content
   const disqusprops = {
-    shortname: `ilyanaDev`
+    shortname: `ilyana-dev`
   };
   console.log(disqusprops)
 
