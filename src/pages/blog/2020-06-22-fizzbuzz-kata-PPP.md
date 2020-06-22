@@ -8,6 +8,7 @@ tags:
   - software development
   - katas
   - coding
+  - fizzbuzz
 ---
 
 I recently tried the FizzBuzz kata again, this time using the Pseudocode Programming Process [described by Steve McConnell in *Code Complete*](https://ilyana.dev/blog/2020-06-19-code-complete-part2/). [The last time I tried this kata](https://ilyana.dev/blog/2020-06-16-fizzbuzz-kata-explanation/) I used test-driven development instead.

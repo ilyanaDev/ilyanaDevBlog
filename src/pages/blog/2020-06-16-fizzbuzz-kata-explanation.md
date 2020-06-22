@@ -8,6 +8,7 @@ tags:
   - software development
   - katas
   - coding
+  - fizzbuzz
 ---
 
 Here are my notes on how to do the FizzBuzz code kata, which is great for test-driven development, starting from just creating the file in the Command Prompt. To get the most out of this, do the kata on your own, then use these notes if you get stuck.
