@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { DiscussionEmbed } from 'disqus-react'
 
 export const BlogPostTemplate = ({
   content,
@@ -17,6 +18,10 @@ export const BlogPostTemplate = ({
   date,
 }) => {
   const PostContent = contentComponent || Content
+  const disqusprops = {
+    shortname: `ilyanaDev`
+  };
+  console.log(disqusprops)
 
   return (
     <section className="section">
@@ -48,6 +53,13 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </div>
+      <div>
+      
+  <DiscussionEmbed
+    shortname={disqusprops.shortname}
+    config={disqusprops.config}
+    />
+</div>
     </section>
   )
 }

@@ -37,6 +37,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'disqus-react',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
