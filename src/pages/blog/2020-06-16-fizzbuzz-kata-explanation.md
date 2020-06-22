@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The FizzBuzz Kata Step-By-Step
 date: 2020-06-16T17:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/fizzbuzz.png
 tags:
   - software development
