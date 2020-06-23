@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Setting Up Disqus for Your Blog
 date: 2020-06-22T18:07:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/setting-up-disqus-blog.png
 tags:
   - blogging
