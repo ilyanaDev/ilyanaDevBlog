@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The FizzBuzz Kata Step-By-Step Using the Pseudocode Programming Process
 date: 2020-06-22T17:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/fizzbuzzppp.png
 tags:
   - software development
