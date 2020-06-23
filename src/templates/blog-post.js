@@ -90,7 +90,27 @@ const BlogPost = ({ data }) => {
               name="description"
               content={`${post.frontmatter.description}`}
             />
-          </Helmet>
+            {post.frontmatter.featuredimage ? (
+              <meta name="image" content={`https://ilyana.dev` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />) : 
+              <meta name="image" content={`https://ilyana.dev` + `/img/og-image.jpg`} />
+            }              
+             <meta property="og:type" content="blog" />          
+             <meta property="og:image:alt" content={`${post.frontmatter.title}`} />          
+             <meta property="og:locale" content="en_US" />         
+             {post.frontmatter.featuredimage ? (
+              <meta property="og:image" content={`https://ilyana.dev` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />) : 
+              <meta property="og:image" content={`https://ilyana.dev` + `/img/og-image.jpg`} />
+            }              
+             <meta property="og:title" content={`${post.frontmatter.title}`} />
+             <meta property="og:description" content={`${post.frontmatter.description}`} />
+             <meta property="og:site_name" content="https://ilyana.dev" />
+             <meta name="twitter:title" content={`${post.frontmatter.title}`} />
+
+             {post.frontmatter.featuredimage ? (
+              <meta name="twitter:image" content={`https://ilyana.dev` + `${post.frontmatter.featuredimage.childImageSharp.fluid.src}`} />) : 
+              <meta name="twitter:image" content={`https://ilyana.dev` + `/img/og-image.jpg`} />
+            }           
+            </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
