@@ -187,6 +187,8 @@ namespace _2020_06_03
 }
 ```
 
+ See my final code in GitHub [here](https://github.com/ilyanaDev/KataPractice/blob/master/FizzBuzz/2020-06-03/UnitTest1.cs).
+
 Helpful Hints
 
 * If your test is failing and should not, your test might be broken. Be sure that you changed all the necessary numbers when copying and pasting tests, for example.
