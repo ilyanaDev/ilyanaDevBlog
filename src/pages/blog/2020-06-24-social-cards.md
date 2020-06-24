@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Social Cards
-date: 2020-06-24T18:07:10.000Z
+date: 2020-06-24T14:07:10.000Z
 featuredpost: true
 featuredimage: /img/social-cards.png
 tags:
