@@ -11,14 +11,16 @@ tags:
   - fizzbuzz
 ---
 
-Here are my notes on how to do the FizzBuzz code kata, which is great for test-driven development, starting from just creating the file in the Command Prompt. To get the most out of this, do the kata on your own, then use these notes if you get stuck.
+Here are my notes on how to do the FizzBuzz code kata, which is great for test-driven development, starting from just creating the file in the Command Prompt. To get the most out of this, do steps 1-4, do the rest of the kata on your own, then use these notes if you get stuck.
 
 1. Open Terminal in VS Code, navigate to desired folder.
    1. use "cd.." to navigate up a directory, use  "cd " + folder name to navigate down a directory.
+   2. You'll need VS Code installed, if you don't already. Download [here](https://code.visualstudio.com/).
 2. Use "dotnet new xunit" to create your project.
-3. Use "code ." to open that project.
+3. Use "code ." to open that project in VS Code.
+   1. You'll now have a project with a sample test already set up, and you're now ready to go!
 4. Go to [Ardalis's FizzBuzz Kata Instructions](https://github.com/ardalis/kata-catalog/blob/master/katas/FizzBuzz.md)
-5. Create "public class FizzBuzz" under namespace
+5. Create "public class FizzBuzz" under the same namespace as the tests
    1. Don't forget to put curly braces in the weird way c# does (both on their own line)
 6. FizzBuzz class contains only method `public String fizzBuzz(int input)`, which contains the line `return "";` 
 7. Assemble test: 3 A's - Arrange, Act Assert
