@@ -29,7 +29,7 @@ Here are my notes on how to do the FizzBuzz code kata, which is great for test-d
    3. Assert - `Assert.Equal("1", output);`
    4. Your test should read as follows:
    
-   ```
+   ```csharp
         public class UnitTest1
         {
             [Fact]
@@ -54,6 +54,7 @@ Here are my notes on how to do the FizzBuzz code kata, which is great for test-d
 14. Now we repeat steps (7-10) with 3, except 3 should return "Fizz"
 15. Now we look back at our tests for inputs of 1 and 2 and realize they are quite repetitive. How do we fix this? A theory! A theory allows us to convert this code:
 
+```csharp
         [Fact]
         public void Gives1Given1()
         {
@@ -96,10 +97,11 @@ Here are my notes on how to do the FizzBuzz code kata, which is great for test-d
             String output = f.fizzBuzz(input);
             Assert.Equal(input.ToString(), output);
         }
+```
 
 16. Now we just have to modify our `fizzBuzz` method to return "Buzz" for multiples of 5 and "FizzBuzz" for multiples of 3 and 5. Your final kata code will probably look something like this:
 
-```
+```csharp
 using System;
 using Xunit;
 
