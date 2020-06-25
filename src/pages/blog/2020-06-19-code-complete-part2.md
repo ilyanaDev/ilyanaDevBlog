@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Code Complete Part 2 Notes
 date: 2020-06-19T15:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/code-complete-part2.png
 tags:
   - codeComplete
