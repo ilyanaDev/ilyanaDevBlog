@@ -84,9 +84,11 @@ Here are my notes on how to do the FizzBuzz code kata, which is great for test-d
             Assert.Equal("2", output);
 
         }
+```
 
     To this much simpler code:
 
+```csharp
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
