@@ -86,7 +86,7 @@ Here are my notes on how to do the FizzBuzz code kata, which is great for test-d
         }
 ```
 
-    To this much simpler code:
+To this much simpler code:
 
 ```csharp
         [Theory]
