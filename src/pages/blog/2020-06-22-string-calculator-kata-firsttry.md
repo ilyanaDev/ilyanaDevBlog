@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The String Calculator Kata - First Attempt
 date: 2020-06-22T17:05:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/stringcalc1.png
 tags:
   - software development
