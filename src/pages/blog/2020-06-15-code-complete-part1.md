@@ -37,7 +37,7 @@ Part 1 includes chapters 1-4: Welcome to Software Construction, Metaphors for a 
   * "Writing Code" - works well for small projects; essentially, "writing code" implies you sit down and write it start to finish like a letter and then mail it out and can't make any changes after that. It implies that code should be readable. But it also gives a misleading implication of simplicity and casualness that doesn't work well for larger-scale, often-expensive projects.
   * "Growing a System" - add to your system a little at a time through careful design and addition of each new piece, and test as you go. Easy to overextend because the farming aspect implies a certain lack of direct control over your code.
   * "System Accretion"- closely related to farming but a slightly better fit. It's still about adding things piece-by-piece, but more in the way an oyster does to make a pearl than the way a farmer does to plant a field. Incremental development - make simplest possible system that will run - a skeleton to support the more complex pieces. Then fill it in - change dummy classes to functional ones; input real input and output real output.
-  * "Building Software" - Lots of good parallels with the incremental oyster metaphor, while also implying the importance of planning, and the *varied* importance of planning based on the complexity of each project. For example, making a big mistake on a doghouse (like forgetting a door) is a far less costly error than a comparatively small mistake on something much larger, like a house or a skyscraper. Plus, you can use higher-level design by purchasing componnents like cabinets and dishwashers, rather than designing them yourself. Good planning means you can make progress on the outline while still retaining the ability to change your mind on the details.
+  * "Building Software" - Lots of good parallels with the incremental oyster metaphor, while also implying the importance of planning, and the *varied* importance of planning based on the complexity of each project. For example, making a big mistake on a doghouse (like forgetting a door) is a far less costly error than a comparatively small mistake on something much larger, like a house or a skyscraper. Plus, you can use higher-level design by purchasing components like cabinets and dishwashers, rather than designing them yourself. Good planning means you can make progress on the outline while still retaining the ability to change your mind on the details.
     * ![Doghouse Example](/img/codeComplete-doghouse-noDoor.png "Doghouse Example")
   * "Intellectual Toolbox" - to solve complex problems, you need an extensive set of tools. Keeping different aspects of different helpful metaphors handy allows you to have many different ways of approaching and solving problems, and you can apply the most effective tool in each situation.
 * Combine metaphors! But use them with care - you don't want to end up wasting valuable time searching for an "ether"!
@@ -78,12 +78,12 @@ Part 1 includes chapters 1-4: Welcome to Software Construction, Metaphors for a 
     * Cancel the project (think very carefully before doing this)
     * Remember to pay attention to how the project is going to be implemented - how much will the proposed change actually improve the value of the project? Is the change still worthwhile when considered in this context?
 * Good architecture = easy construction. Without it, you may have the right problem but an ineffective solution
-* Architectural componnents (all should be described alongside alternatives that were considered):
+* Architectural components (all should be described alongside alternatives that were considered):
   * Program organization - building block responsibilities, as well as inter-block communication channels, should be well-defined, and building blocks need to fit into the system as a whole.
   * Major classes - again, responsibilities and interactions need to be well-defined, and they need to fit into your end goal
   * Data design - file and table designs; data should only be directly accessed by one subsystem or class
   * Business rules - depend on the requirements of the customer but should be clearly defined in architecture (client may have policy that customer information must be less than 30 seconds out of date, for example)
-  * User interface design - needs to be well-designed, but should also be well-separated from other componnents, so you can substitute new UI's as needed without impacting other componnents
+  * User interface design - needs to be well-designed, but should also be well-separated from other components, so you can substitute new UI's as needed without impacting other components
   * Resource management - you gotta have a plan for use of scarse resources like database connections and memory
   * Security - describe security approaches and how secure various elements need to be
   * Performance - goals are important, often related to resource use
@@ -103,10 +103,10 @@ Part 1 includes chapters 1-4: Welcome to Software Construction, Metaphors for a 
   * Fault tolerance - how to detect, fix, and contain errors
   * Architectural feasibility - demonstration that the system can feasibly be constructed
   * Overengineering - how robust does your system need to be? Should classes fulfil the bare minimum or should they be overengineered?
-  * Buy-vs.-Build decisions - if you aren't buying componnents like GUI controls and databases, why not? What will your custom-built componnents do that off-the-shelf componnents can't?
+  * Buy-vs.-Build decisions - if you aren't buying components like GUI controls and databases, why not? What will your custom-built components do that off-the-shelf components can't?
     * Reuse decisions - how will any pre-existing software you use conform to your project's requirements?
   * Change strategy - flexibility! But how much?
-  * General architectural quality - architectural specification "should be a polished conceptualwhole with few ad hoc additions" (pg 52). It should fit the problem and explain why the solution proposed is the right one. And why each decision is made.
+  * General architectural quality - architectural specification "should be a polished conceptual whole with few ad hoc additions" (pg 52). It should fit the problem and explain why the solution proposed is the right one. And why each decision is made.
     * Here's an abbreviated version of the example given here - Beth wants to make pot roast, and her husband tells her he's always made pot roast by cutting both ends off before putting it in the pot. Why? Because his mom did it that way. He asks his mom why she did it that way. Because her mom did it that way. She asks her mom why she does it that way. Because it was too big to fit in her pot! Obviously it was unnecessary for Beth, with a bigger pot, to cut off the ends.
 * How much time should you spend on upstream prerequisites? Base your answer on stability of requirements and size and formality of the project
   * When requirements are unstable, treat them as their own project

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Project Euler
 date: 2020-06-24T14:07:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/project-euler.png
 description: I recently rediscovered Project Euler, which provides hundreds of excellent mathematics/coding problems.
 tags:

@@ -260,7 +260,7 @@ Part 4 includes chapters 14-19: Organizing Straight-Line Code, Using Conditional
     * Sequence - a set of statements executed in order
     * Selection - statements are executed selectively via if-then-else or case statements
     * Iteration - a group of statements are executed multiple times; a "loop"
-  * the idea is that you can create any control flow whatsoever from these three componnents
+  * the idea is that you can create any control flow whatsoever from these three components
 * How control structures are used has important correlation to complexity of a program
 * To measure complexity, you can count the number of decision points in your routine - 1 for the direct path, then another decision point for each of the following: if, while, repeat, for, and, or
   * with more than 6, you should simplify
