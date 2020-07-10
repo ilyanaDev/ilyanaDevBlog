@@ -4,6 +4,7 @@ title: The String Calculator Kata - First Attempt
 date: 2020-06-22T17:05:10.000Z
 featuredpost: false
 featuredimage: /img/stringcalc1.png
+description: I recently completed the String Calculator kata for the first time. I got through three of nine sections in the 30 minutes provided.
 tags:
   - software development
   - katas

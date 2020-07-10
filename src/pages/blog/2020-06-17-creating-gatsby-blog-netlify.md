@@ -4,6 +4,7 @@ title: Creating a Gatsby Blog with Netlify
 date: 2020-06-17T15:07:10.000Z
 featuredpost: false
 featuredimage: /img/creating-gatsby-blog-netlify.png
+description: Gatsby and Netlify together produce a powerful website building and hosting duo.
 tags:
   - blogging
   - coding

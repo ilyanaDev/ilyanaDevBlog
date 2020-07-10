@@ -4,6 +4,7 @@ title: Setting up a Twitter Account
 date: 2020-06-09T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/setting-up-twitter.png
+description: I recently created a Twitter account - here's how.
 tags:
   - setup
 ---

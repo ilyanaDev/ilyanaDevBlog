@@ -4,6 +4,7 @@ title: Notes from Design Patterns Overview Pluralsight Course
 date: 2020-07-01T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/design-patterns-overview.png
+description: I found Steve Smith's Design Patterns Overview course on Pluralsight very useful and informative.
 tags:
   - software development
   - coding

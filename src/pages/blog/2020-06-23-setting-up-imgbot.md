@@ -4,6 +4,7 @@ title: Setting up Imgbot
 date: 2020-06-23T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/setting-up-imgbot.png
+description: Imgbot optimizes images in your GitHub repository for better performance.
 tags:
   - setup
   - GitHub

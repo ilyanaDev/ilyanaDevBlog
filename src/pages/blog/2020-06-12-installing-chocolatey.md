@@ -4,6 +4,7 @@ title: Installing Chocolatey
 date: 2020-06-12T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/install-chocolatey.png
+description: Chocolatey is a powerful installation tool I recently began using.
 tags:
   - command line
 ---
@@ -18,7 +19,7 @@ Chocolatey is a great application for installing other applications on your comp
 Installing Chocolatey
 --
 
-To install Chocolatey, go to chocolatey.org/install and follow the instructions provided.
+To install Chocolatey, go to [the Chocolatey website](https://chocolatey.org/install) and follow the instructions provided.
 
 Using Chocolatey
 --

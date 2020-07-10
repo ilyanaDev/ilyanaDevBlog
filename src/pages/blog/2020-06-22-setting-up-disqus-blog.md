@@ -4,6 +4,7 @@ title: Setting Up Disqus for Your Blog
 date: 2020-06-22T18:07:10.000Z
 featuredpost: false
 featuredimage: /img/setting-up-disqus-blog.png
+description: I just added a comments section to this blog using Disqus! Here's how.
 tags:
   - blogging
   - coding

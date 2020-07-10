@@ -4,6 +4,7 @@ title: Configuring Google Analytics for Your Gatsby Blog
 date: 2020-06-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/configuring-google-analytics-blog.png
+description: Google Analytics is a tool for analyzing traffic on your website.
 tags:
   - blogging
   - coding

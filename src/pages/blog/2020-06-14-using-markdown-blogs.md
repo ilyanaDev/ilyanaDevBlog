@@ -4,6 +4,7 @@ title: Using Markdown in VS Code
 date: 2020-06-14T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/markdown-vscode.png
+description: I use Markdown to write my blog posts, and I've found it very easy to use in VS Code.
 tags:
   - blogging
   - coding
@@ -53,7 +54,7 @@ From here, you're all set to use VS Code to write Markdown. However, here are a 
 Useful Resources
 --
 
-* The "Writing Content With Markdown" PluralSight course by Justin Schwartzenberger gives a great overview of the basics of Markdown.
+* The ["Writing Content With Markdown"](https://app.pluralsight.com/library/courses/writing-content-with-markdown/table-of-contents) PluralSight course by Justin Schwartzenberger gives a great overview of the basics of Markdown.
 * When you're starting off with Markdown, [this page](https://www.markdownguide.org/basic-syntax/#links) is a great resource to help you with syntax.
 * [Here's](https://css-tricks.com/little-stuff-markdown-always-forget-google/) another page with syntax stuff. It's less extensive than the first but explains things pretty well and is good for taking a look at simpler stuff than that first page.
 

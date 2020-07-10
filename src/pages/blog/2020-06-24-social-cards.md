@@ -4,6 +4,7 @@ title: Social Cards
 date: 2020-06-24T14:07:10.000Z
 featuredpost: false
 featuredimage: /img/social-cards.png
+description: I recently fixed the social cards for this website! Here's how.
 tags:
   - blogging
   - coding

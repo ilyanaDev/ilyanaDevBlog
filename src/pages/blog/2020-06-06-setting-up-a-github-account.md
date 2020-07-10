@@ -4,6 +4,7 @@ title: Setting up a GitHub Account
 date: 2020-06-06T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/setting-up-github.png
+description: GitHub can be used for file organization, source control, and collaboration.
 tags:
   - setup
   - GitHub
@@ -43,7 +44,7 @@ If you decide to enable two-factor authentication, you'll have to install the ap
 Finishing Up
 ---
 
-Using the git system is fairly simple once you get used to it, but it does take some time to learn exactly what you should be doing. I'd recommend doing some I'd like to mention that one thing that tripped me up for awhile as I tried to link some desktop files in VS Code to a GitHub repository. If you have this problem, where your command line wants you to sign into your GitHub account, but it isn't accepting your password, you can create a Personal Access Token instead. [This link](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) has excellent step-by-step instructions on how to do this.
+Using the git system is fairly simple once you get used to it, but it does take some time to learn exactly what you should be doing. I'd like to mention that one thing that tripped me up for awhile was that my normal GitHub password didn't work to link some desktop files in VS Code to a GitHub repository. If you have this problem, where your command line wants you to sign into your GitHub account, but it isn't accepting your password, you can create a Personal Access Token instead. [This link](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) has excellent step-by-step instructions on how to do this.
 
 Useful Resources
 ---

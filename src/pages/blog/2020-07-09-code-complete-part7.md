@@ -4,6 +4,7 @@ title: Code Complete Part 7 Notes
 date: 2020-07-09T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/code-complete-part7.png
+description: Code Complete by Steve McConnel is a well-written explanation of themes in software construction.
 tags:
   - codeComplete
   - software development
