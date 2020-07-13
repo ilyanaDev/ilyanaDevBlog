@@ -22,4 +22,6 @@ To view my code, click [here](https://github.com/ilyanaDev/KataPractice/tree/mas
 
 I found this kata to be very helpful, and I will definitely try it again in the future to try to beat my performance from this attempt. Best of luck to you if you decide to try it!
 
+Update: I've tried this kata again since this post. To view my most recent attempt, click [here](https://ilyana.dev/blog/2020-07-10-string-calculator-kata-secondtry/).
+
 Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
