@@ -8,6 +8,7 @@
     "disqus-react": "^1.0.8",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
+    "gatsby-plugin-feed": "^2.5.11",
     "gatsby-plugin-google-tagmanager": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^4.2.5",
