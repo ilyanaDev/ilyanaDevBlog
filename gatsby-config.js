@@ -3,7 +3,7 @@ module.exports = {
     title: 'ilyanaDev',
     siteUrl: `https://ilyana.dev`,
     description:
-      'Welcome to the blog of ilyanaDev!',
+      'Hi, I\'m Ilyana. Welcome to my blog!',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
