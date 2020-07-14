@@ -12,7 +12,7 @@ tags:
   - pluralsight
 ---
 
-I recently completed the Pluralsight course [**Design Patterns Overview**](https://app.pluralsight.com/library/courses/design-patterns-overview/table-of-contents) by Steve Smith, which was very informative as a bird's eye view of design patterns as a general topic.
+I recently completed the Pluralsight course **[Design Patterns Overview](https://app.pluralsight.com/library/courses/design-patterns-overview/table-of-contents)** by Steve Smith, which was very informative as a bird's eye view of design patterns as a general topic.
 
 Why learn design patterns?
 --

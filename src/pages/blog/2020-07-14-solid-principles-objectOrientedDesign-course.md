@@ -12,7 +12,7 @@ tags:
   - pluralsight
 ---
 
-I recently completed [**SOLID Principles of Object Oriented Design**](https://app.pluralsight.com/library/courses/principles-oo-design/table-of-contents) by Steve Smith. Here are my notes:
+I recently completed **[SOLID Principles of Object Oriented Design](https://app.pluralsight.com/library/courses/principles-oo-design/table-of-contents)** by Steve Smith. Here are my notes:
 
 Single Responsibility Principle
 --
