@@ -4,7 +4,7 @@ title: Creating a New GitHub Repository to Work with on Your Desktop
 date: 2020-06-24T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/connecting-github.png
-description: As beginner, even simple tasks like creating a new GitHub repository to access from your desktop can seem overly complex.
+description: As a beginner, even simple tasks like creating a new GitHub repository to access from your desktop can seem overly complex.
 tags:
   - coding
   - GitHub
