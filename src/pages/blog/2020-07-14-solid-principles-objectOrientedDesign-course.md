@@ -227,7 +227,7 @@ Don't Repeat Yourself Principle
 * Repetition -> errors and waste
 * Refactor code to remove repetition
 * Abstract logic in code
-* Related to Template Method Pattern, Comand Pattern, Dependency Inversion Principle
+* Related to Template Method Pattern, Command Pattern, Dependency Inversion Principle
 * Recommended reading: *The Pragmatic Programmer: From Journeyman to Master* and *97 Things Every Programmer Should Know*
 
 Summary
