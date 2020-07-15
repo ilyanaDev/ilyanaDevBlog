@@ -145,6 +145,7 @@ module.exports = {
                     {
                       allMarkdownRemark(
                         sort: { order: DESC, fields: [frontmatter___date] },
+                        filter: {fileAbsolutePath: {regex: "content/blog/"}},
                         limit: 10
                       ) {
                         edges {
