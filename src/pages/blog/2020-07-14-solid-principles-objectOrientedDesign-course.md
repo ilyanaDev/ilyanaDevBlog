@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Notes from SOLID Principles of Object Oriented Design Pluralsight Course
 date: 2020-07-14T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/solid-principles-pluralsight.png
 description: Steve Smith's Pluralsight course on SOLID Principles of Object Oriented Design is a great overview of the 5 SOLID principles, as well as the Don't Repeat Yourself Principle.
 tags:

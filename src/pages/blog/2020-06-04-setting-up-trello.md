@@ -7,6 +7,7 @@ featuredimage: /img/setting-up-trello.png
 description: Trello is a powerful tool for any sort of organization, from grocery lists to tasks at work.
 tags:
   - setup
+  - trello
 ---
 
 What is Trello?
