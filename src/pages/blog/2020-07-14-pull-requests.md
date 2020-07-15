@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Submitting Pull Requests to Another Person's Repository on GitHub
 date: 2020-07-14T15:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/github-pull-requests.png
 description: Pull requests are an important feature of GitHub repositories.
 tags:

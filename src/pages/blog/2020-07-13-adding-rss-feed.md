@@ -8,6 +8,7 @@ description: An RSS (really simple syndication) feed allows users using an RSS r
 tags:
   - blogging
   - coding
+  - rss feed
 ---
 
 If you use an RSS Reader...
