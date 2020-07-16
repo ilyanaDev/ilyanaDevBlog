@@ -1,0 +1,118 @@
+---
+templateKey: blog-post
+title: Notes from Creating N-Tier Applications in C#, Part 1 Pluralsight Course
+date: 2020-07-16T05:04:10.000Z
+featuredpost: true
+featuredimage: /img/ntier1-pluralsight.png
+description: Steve Smith's Pluralsight course Creating N-Tier Applications in C#, Part 1 does a great job of explaining the basics of N-Tier applications.
+tags:
+  - software development
+  - coding
+  - pluralsight
+---
+
+I recently completed **[Creating N-Tier Applications in C#, Part 1](https://app.pluralsight.com/library/courses/n-tier-apps-part1/table-of-contents)** by Steve Smith. Here are my notes:
+
+Application Evolution
+--
+
+* N Tier refers to a system composed of some n number of layers
+  * Most commonly 3 - UI, Business Logic, Data Access Logic
+  * Separated tiers are logically separated. Sometimes also physically separated. Sometimes separate deployment and even separate development
+* "Tier" and "Layer" more or less interchangeable
+  * "Layer" can be applied specifically to logical structure of application
+  * "Tier" can be applied specifically to the physical structure of the system
+* Logical separation:
+  * code organization
+  * namespaces, classes, folders, assemblies, etc.
+  * a software design pattern
+* Physical separation:
+  * infrastructure organization
+  * separate physical processes, machines, devices
+  * a software architecture
+  * generally impossible without logical separation
+* Benefits:
+  * improved productivity via reuse
+  * improved productivity via team segmentation
+  * improved maintainability
+  * looser coupling
+  * more physical deployment options
+* Drawbacks and Risks:
+  * reduced performance, esp. when physically separated
+  * more complex design
+  * more complex deployment
+* Coupling:
+  * loose coupling allows connected modules to change independently of one another
+  * tight coupling describes when changes in one module require changes in others
+    * avoid this
+  * Follow principles of object-oriented design to facilitate loose coupling
+* End runs - when one application layer calls to another that is not directly below it
+  * avoid this!
+  * and avoid allowing concerns from one layer to leak up to a higher layer - information hiding!
+  * end runs -> no advantage gained from n-tier design (but lots of disadvantage)
+* Monolithic application
+  * n-tier where n = 1
+  * no logical or physical separation of concerns
+  * all parts of the application are included
+
+Data-Centric N-Tier Design
+--
+
+* Problems this design can help with:
+  * no easy way to test notification business logic
+  * duplicated and/or tightly coupled logic
+  * changes to one portion of a system requiring changes to another portion
+* Refactoring to N-tier design:
+  * Identify your layers
+  * Push your code from the original file into these layers
+* *This module is mostly demos*
+
+Domain-Centric N-Tier Design
+--
+
+* Domain-Centric Design
+  * focused on domain
+    * problem-space of application = domain
+  * objects you design to model domain = domain objects = model objects
+    * should describe problem domain, include any required business logic
+    * do not depend on external infrastructure
+* Refactor to invert dependencies from a data-centric N-tier design:
+  * create projects for core and infrastrucutre
+  * move BLL methods to core or infrastructure services
+  * create interfaces for dependencies and provide them to classes via constructors
+  * push object graph creation to UI layer
+* Onion architecture = ports and adapters architecture = hexagonal architecture
+* Onion architecture principles:
+  * all code depends on layers closer to center
+  * domain model at center
+  * inner layers define interfaces, outer layers implement those interfaces - abstraction!
+  * layered behavior around the domain model
+  * infrastructure and UI concerns pushed to end
+    * depend on Application Core, not vice versa
+* Repository pattern used for infrastructure concerns related to persistence
+* Domain-Centric design from scratch:
+  * create a blank solution
+  * add a core class library project
+  * add an infrastructure class library project
+  * add your UI project
+  * add references to core from infrastructure and UI
+  * add reference to infrastructure from UI (if needed)
+
+Summary
+--
+
+* N-Tier Design = logical and physical separation of responsibilities within an application
+* Layers = logical separation for maintainability
+* Tiers = physical separation for scalability, security, fault tolerance, etc.
+* Applications can evolve over time
+* Avoid end runs around layers of your design
+* Duplication can be eliminated via refactoring to N-tier design
+* Concerns should be separated between layers
+* Layers should communicate with one another via well-defined, cohesive interfaces
+* domain-centric design focuses on your application's domain logic
+* dependency injection can be used to put application logic at the center of the dependencies
+  * used well with strategy pattern
+* domain-centric design leads to easier testing
+* much easier to start with domain-centric design than to refactor to it later
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
