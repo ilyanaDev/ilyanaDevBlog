@@ -8,6 +8,7 @@ description: Google Analytics is a tool for analyzing traffic on your website.
 tags:
   - blogging
   - coding
+  - google analytics
 ---
 
 Why do I want Google Analytics?
