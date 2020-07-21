@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Adding an RSS Feed to your Gatsby Site - Update- limiting items in feed
 date: 2020-07-15T14:05:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/rss-feed-gatsby-update.png
 description: An RSS (really simple syndication) feed allows users using an RSS reader to subscribe to content and be notified when new content is added to a site. I've now limited my RSS feed to 10 items.
 tags:
