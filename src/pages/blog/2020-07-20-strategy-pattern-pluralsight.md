@@ -9,6 +9,7 @@ tags:
   - software development
   - coding
   - pluralsight
+  - design patterns
 ---
 
 I recently finished going through the course [C# Design Patterns: Strategy](https://app.pluralsight.com/library/courses/c-sharp-design-patterns-strategy/table-of-contents) by Filip Ekberg on Pluralsight.
