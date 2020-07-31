@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Gilded Rose Kata - First Attempt
 date: 2020-07-21T05:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/gilded-rose-1.png
 description: The Gilded Rose kata is an excellent way for anyone to work on their refactoring skills.
 tags:
