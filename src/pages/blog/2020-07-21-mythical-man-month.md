@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Mythical Man-Month
 date: 2020-07-21T07:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/mythical-manmonth.png
 description: The Mythical Man-Month by Fred Brooks is considered somewhat of a classic in the world of books about software.
 tags:
