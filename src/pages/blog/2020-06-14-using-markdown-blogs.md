@@ -8,6 +8,7 @@ description: I use Markdown to write my blog posts, and I've found it very easy 
 tags:
   - blogging
   - coding
+  - web development
 ---
 
 Why Use Markdown?

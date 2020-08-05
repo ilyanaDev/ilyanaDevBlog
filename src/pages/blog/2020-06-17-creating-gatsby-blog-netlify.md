@@ -9,6 +9,7 @@ tags:
   - blogging
   - coding
   - command line
+  - web development
 ---
 
 What is Gatsby?

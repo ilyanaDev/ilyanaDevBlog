@@ -8,6 +8,7 @@ description: The code displayed on my blog now looks very aesthetic. Wondering w
 tags:
   - blogging
   - coding
+  - web development
 ---
 
 What Prism Does

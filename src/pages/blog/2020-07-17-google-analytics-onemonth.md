@@ -9,6 +9,7 @@ tags:
   - blogging
   - coding
   - google analytics
+  - web development
 ---
 
 Click [here](https://ilyana.dev/blog/2020-06-17-configuring-google-analytics-blog/) to see my original post on setting up Google Analytics.

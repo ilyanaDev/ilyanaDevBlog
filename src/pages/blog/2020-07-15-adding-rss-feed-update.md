@@ -9,6 +9,7 @@ tags:
   - blogging
   - coding
   - rss feed
+  - web development
 ---
 
 To see my original post on adding an RSS feed to your Gatsby Site, click [here](https://ilyana.dev/blog/2020-07-13-adding-rss-feed/)

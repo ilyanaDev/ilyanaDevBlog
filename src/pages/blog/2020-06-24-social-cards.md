@@ -8,6 +8,7 @@ description: I recently fixed the social cards for this website! Here's how.
 tags:
   - blogging
   - coding
+  - web development
 ---
 
 Social cards are pretty cool when they work. But you're probably wondering: What on Earth is a social card? Social cards are the auto-generated website previews that you see when a URL is sent via Twitter, Slack, Discord, etc. I recently fixed the ones for my blog so that instead of looking like this:
