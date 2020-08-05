@@ -25,6 +25,14 @@ const Footer = class extends React.Component {
               <div className="column is-4">
               </div>
               <div className="column is-4 social">
+              <form action="http://www.google.com/search" method="get">
+    <input type="hidden" name="q" value="site:ilyana.dev"/>
+    <input type="text" name="q" alt="search"/>
+    <input type="submit" value="Search my Site with Google"/>
+</form>
+
+  <h1 style={{color: "002338"}}> </h1>
+
                 <a title="twitter" href="https://twitter.com/ilyanaDev">
                   <img
                     className="fas fa-lg"
