@@ -42,7 +42,7 @@ In each of our three examples, the store needs to perform the same operations on
 
 However, as demonstrated above, using a subclass of the abstract class `Coffee` or `Sandwich` or `Pizza` for each variation would be an absolute nightmare. Instead, they use the Decorator Pattern. Several concrete component base variations will inherit from each class. `Mocha` and `Club` and `SupremePizza`, for example.
 
-Next, an abstract decorator class inherits from each of the abstract superclasses. It has to inherit from the super class because the decorator objects have to have the same type as the objects they're decorating. Finally, various concrete decorator classes describing modifications (`ExtraWhip`, `MayoOnTheSide`, `Large`) inherit from the abstract decorator class. Each of these decorator classes *has* a member of the abstract superclass. This is the obejct which it decorates.
+Next, an abstract decorator class inherits from each of the abstract superclasses. It has to inherit from the super class because the decorator objects have to have the same type as the objects they're decorating. Finally, various concrete decorator classes describing modifications (`ExtraWhip`, `MayoOnTheSide`, `Large`) inherit from the abstract decorator class. Each of these decorator classes *has* a member of the abstract superclass. This is the object which it decorates.
 
 Now, each of your orders can be neatly wrapped up and the costs elegantly calculated:
 

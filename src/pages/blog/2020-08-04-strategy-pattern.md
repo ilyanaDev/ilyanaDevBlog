@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Strategy Pattern
 date: 2020-08-04T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/strategy-pattern.png
 description: The Strategy Pattern is a common design pattern that allows the program to select an algorithm/strategy at runtime. Instead of using inheritance to assign behaviors to objects, the Strategy Pattern uses composition.
 tags:

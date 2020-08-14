@@ -26,7 +26,7 @@ What if you want to make edits to another person's repository?
 
 * Go into your new repository, click the green **Clone** button, and copy the URL to your clipboard.
 
-![Clone GitHub Repo](/img/github-clone-repository-new.png "Clone GitHub Repo")
+![Clone GitHub Repo](/img/github-clone-repository.png "Clone GitHub Repo")
 
 * On your computer, create a new folder with the same name as your repository.
 * Open your command line, navigate to the folder you just created, and enter the command `git clone` + the URL you copied to your clipboard.
