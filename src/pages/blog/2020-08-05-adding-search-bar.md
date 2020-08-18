@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Adding a Search Bar to Your Site
 date: 2020-08-05T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/search-bar.png
 description: I recently added search capability to this site! Scroll down to the footer to check it out!
 tags:
