@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Decorator Pattern
 date: 2020-08-10T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/decorator-pattern.png
 description: The Decorator Pattern is a design pattern that allows object functionality to be modified at runtime without violating the Open-Closed Principle and is in many situations a good alternative to subclassing.
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Observer Pattern
 date: 2020-08-07T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/observer-pattern.png
 description: The Observer Pattern is a design pattern that allows objects to react to changes in another object's data while maintaining loose coupling. In this pattern, observer objects can decide at runtime whether to receive data from the subject object.
 tags:

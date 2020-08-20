@@ -18,6 +18,9 @@ Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/cour
 
 Steve Smith also has a good synopsis of the pattern in [one of his blog posts](https://ardalis.com/the-singleton-design-pattern/).
 
+Note: I should mention that many developers, for good reason, consider the Singleton an antipattern. There are a lot of valid arguments against using it, so you should consider carefully whether your project actually necessitates it. [Here](https://codeburst.io/singleton-the-root-of-all-evil-8e59ca966243)'s a blog post from Maximiliano Contieri explaining a number of arguments against Singleton. That said, here's how and why you should implement it, given the correct situation:
+
+
 Why would I want just one instance of a class?
 --
 

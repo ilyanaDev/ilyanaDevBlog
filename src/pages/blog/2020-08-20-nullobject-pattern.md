@@ -1,0 +1,48 @@
+---
+templateKey: blog-post
+title: The Null Object Pattern
+date: 2020-08-20T04:04:10.000Z
+featuredpost: true
+featuredimage: /img/nullobject-pattern.png
+description: The null object pattern is a simple pattern that attempts to reduce null checks in a program. You might also know it as the Stub, Active Nothing Pattern, or Active Null Pattern.
+
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - design patterns
+---
+
+*Head First Design Patterns* by Eric Freeman and Elisabeth Freeman provides an brief synopsis of the Null Object Pattern in its sixth chapter.
+
+Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course has a module on the Null Object Pattern from David Starr.
+
+Why should I use the Null Object Pattern?
+--
+
+Null checks are annoying, but they're very prevalent in many programs, and they can really clutter up your code. The purpose of the Null Object pattern is to provide an object that can be referenced instead of a null reference. This allows methods to be called on a variable that could be null without the program having to check whether that variable is null.
+
+Using the Null Object Pattern can help declutter your code and decrease its complexity.
+
+When should I use the Null Object Pattern?
+--
+
+This pattern is most useful when you want to prevent the client from having to deal with null checks. It can be used pretty effectively in conjunction with the [Strategy Pattern](https://ilyana.dev/blog/2020-08-04-strategy-pattern/) and [Command Pattern](https://ilyana.dev/blog/2020-08-20-command-pattern/).
+
+How should I use the Null Object Pattern?
+--
+
+The null object pattern's implementation is pretty simple. First, you'll have an abstract base class for the object you're applying the pattern to. Inheriting from that class are one or more concrete, "real" implementations of the class, as well as at least one concrete null implementation. While the "real" objects will implement various `DoSomething()` methods with actual effects, your null classes will implement those same `DoSomething()` methods such that they actually do nothing.
+
+As David Starr points out, it is common to implement the null object as a [Singleton](https://ilyana.dev/blog/2020-08-18-singleton-pattern/).
+
+Finally
+--
+
+A few last points:
+
+* First, if you are working on a team and choose to use this pattern, it's a good idea to let your colleagues know you are doing so - otherwise they will likely continue to use null checks, preventing you from realizing the full benefits of implementing the pattern
+* Sometimes you'll need multiple null object instances if different callers require different "do nothing" implementations
+* Finally, sometimes callers may need to know whether a null object is involved, so perform those checks when necessary
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
