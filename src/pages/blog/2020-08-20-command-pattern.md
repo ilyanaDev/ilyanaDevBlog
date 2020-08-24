@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Command Pattern
 date: 2020-08-20T06:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/command-pattern.png
 description: The goal of the Command Pattern is to allow queueable and undoable requests by representing an action as an object, much the same way a customer's order at a restaurant is encapsulated in an order slip. Thus, the clients are decoupled from the commands.
 tags:
