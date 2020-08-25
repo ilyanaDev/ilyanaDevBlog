@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Adapter Pattern
 date: 2020-08-21T04:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/adapter-pattern.png
 description: Closely related to the Facade Pattern, the purpose of the Adapter Pattern is to wrap one or more objects in order to convert the original interface to another interface. You may have also know adapters as wrappers.
 

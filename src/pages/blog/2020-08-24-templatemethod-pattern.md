@@ -36,7 +36,7 @@ In the Template Method Pattern, an abstract class holds a template method. In th
 
 That's about all there is to it! Algorithm encapsulation is that easy!
 
-Additionally, if there are optional steps in the algorithm, which some subclasses, will require and some will not, there's an easy fix for that. These are called hoooks. Let's say tomatoes need fertilizer, but peppers don't. `growVeggies()` will call `fertilize()` after `plantSeeds()`. `Vegetable` will provide an implementation of `fertilize()` like this:
+Additionally, if there are optional steps in the algorithm, which some subclasses, will require and some will not, there's an easy fix for that. These are called hooks. Let's say tomatoes need fertilizer, but peppers don't. `growVeggies()` will call `fertilize()` after `plantSeeds()`. `Vegetable` will provide an implementation of `fertilize()` like this:
 
 ```csharp
 //hook
