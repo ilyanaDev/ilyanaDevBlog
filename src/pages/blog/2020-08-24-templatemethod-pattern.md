@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Template Method Pattern
 date: 2020-08-24T05:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/templatemethod-pattern.png
 description: The Template Method Pattern allows for encapsulation of algorithms by defining the skeleton of a method, where some steps are deferred to subclasses. Thus, the subclasses can make necessary changes to the algorithm without altering its overall structure.
 

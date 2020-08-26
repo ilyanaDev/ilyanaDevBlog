@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Iterator Pattern
 date: 2020-08-25T05:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/iterator-pattern.png
 description: The goal of the Iterator Pattern is to provide an interface which allows the client to iterate through an aggregate object without having to know the implementation of the object. You may also know iterators as cursors.
 tags:
