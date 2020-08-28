@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Bridge Pattern
 date: 2020-08-27T08:03:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/bridge-pattern.png
 description: The Bridge Pattern is useful in a system where both implementation and abstraction are likely to change (and thus, should be encapsulated).
 tags:

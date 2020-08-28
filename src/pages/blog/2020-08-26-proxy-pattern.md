@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Proxy Pattern
 date: 2020-08-26T07:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/proxy-pattern.png
 description: The Proxy Pattern is a common design pattern whose intent is to provide a class that acts as a stand-in for another class in order to control access to it. You may also know it as the Surrogate Pattern.
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Composite Pattern
 date: 2020-08-25T06:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/composite-pattern.png
 description: The Composite Pattern is used to organize objects into tree structures representing part-whole hierarchies. It is often used in combination with the Iterator Pattern.
 tags:

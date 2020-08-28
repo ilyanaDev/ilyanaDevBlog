@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Chain of Responsibility Pattern
 date: 2020-08-27T09:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/chain-pattern.png
 description: The Chain of Responsibility Pattern decouples the sender of a message from the handler of that message, and it allows multiple objects the chance to handle the message.
 tags:

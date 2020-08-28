@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: GitHub Fork Shows Past Merges in Pull Requests
 date: 2020-08-26T05:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/github-fork-past-merges.png
 description: I've had an issue a couple of times now where I'm working with a forked repository on GitHub, and whenever I make a pull request, a bunch of "merge" commits show up in addition to the commit where I actually made the changes.
 tags:

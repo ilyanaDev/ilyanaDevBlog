@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The State Pattern
 date: 2020-08-25T07:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/state-pattern.png
 description: The State Pattern is used to alter object behavior based upon an internal state. In most respects it is virtually identical to the Strategy Pattern, though the two have very different intents.
 tags:
