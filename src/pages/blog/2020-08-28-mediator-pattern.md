@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Mediator Pattern
 date: 2020-08-28T03:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/mediator-pattern.png
 description: The Mediator Pattern is useful for decoupling objects in a system that must communicate with one another but which do not need to know about the implementations of one another. This pattern allows the communication between those objects to be altered independently of those objects.
 tags:

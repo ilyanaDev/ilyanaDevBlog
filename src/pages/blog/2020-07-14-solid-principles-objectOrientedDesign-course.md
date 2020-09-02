@@ -9,6 +9,7 @@ tags:
   - software development
   - coding
   - SOLID
+  - principles
   - pluralsight
 ---
 

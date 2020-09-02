@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Interpreter Pattern
 date: 2020-08-28T02:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/interpreter-pattern.png
 description: The Interpreter Pattern strives to define a representation for a language's grammar in order to interpret sentences in that language. This pattern requires the identification of a language and that language's rules, as well as the creation of an interpreter for that language.
 tags:
