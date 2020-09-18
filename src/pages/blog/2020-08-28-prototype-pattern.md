@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Prototype Pattern
 date: 2020-08-28T05:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/prototype-pattern.png
 description: The Prototype Pattern is designed to reduce the overhead of creating a new object by cloning an existing object rather than initiating a new object.
 tags:
