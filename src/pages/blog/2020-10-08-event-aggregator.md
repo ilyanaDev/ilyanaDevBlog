@@ -1,0 +1,27 @@
+---
+templateKey: blog-post
+title: The Event Aggregator Pattern
+date: 2020-10-08T06:04:10.000Z
+featuredpost: true
+featuredimage: /img/event-aggregator-pattern.png
+description: The Event Aggregator Pattern aggregates events in complex systems or systems with a large number of events.
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - design patterns
+---
+
+Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course has a module on the Event Aggregator Pattern from Glenn Block.
+
+The Event Aggregator Pattern simplifies events by providing a single storage place for those events. It decouples publishers and subscribers and makes it very easy to introduce new events.
+
+This pattern is most applicable in a composite application (an application broken up into several modules) or an application with complicated screens and/or lots of events/publishers/subscribers. "It may be overkill for simple systems."
+
+Essentially, the Event Aggregator sits between publishers and subscribers. Subscribers observe the Event Aggregator (rather than a publisher), and publishers know about the Event Aggregator (but not about the subscribers). The publishers publish their notifications to the aggregator, which passes them on to the interested subscribers.
+
+The aggregator is used as a dependency and generally implements an interface. This makes it very easy to test.
+
+The Event Aggregator Pattern also ensures that the system can adhere to the Open/Closed Principle. It is related to the [Observer Pattern](https://ilyana.dev/blog/2020-08-07-observer-pattern/).
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
