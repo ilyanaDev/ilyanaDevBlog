@@ -1,0 +1,27 @@
+---
+templateKey: blog-post
+title: The String Calculator Kata - Sixth Attempt
+date: 2020-10-13T17:05:10.000Z
+featuredpost: true
+featuredimage: /img/stringcalc6.png
+description: Today I undertook the String Calculator kata for the sixth time. I got through five of nine sections in the 30 minutes provided.
+tags:
+  - software development
+  - katas
+  - coding
+  - string calculator
+---
+
+The String Calculator Kata is a great kata for practicing test-driven development. In this kata, you spend 30 minutes trying to complete as many of the 9 sections as possible, but the idea is that you never read ahead - you can only read the step you're on. You can view the instructions [here](https://github.com/ardalis/kata-catalog/blob/master/katas/String%20Calculator.md).
+
+This attempt, I got through 5 sections. That's the same number as last time. Indeed, it's the same number as the last 2 or 3 times. I'm going to try to do this kata at least once per week moving forward, and perhaps that'll allow me to make some more progress next time. Hopefully sometime soon I'll get to a point where I can do all nine!
+
+For a more in-depth description of how to get a kata started in C#, check out the start of [my post on the FizzBuzz kata](https://ilyana.dev/blog/2020-06-22-fizzbuzz-kata-PPP/).
+
+To view my code, click [here](https://github.com/ilyanaDev/KataPractice/tree/master/StringCalculator/2020-10-13).
+
+I found this kata to be very helpful, and I will definitely try it again in the future to try to beat my performance from this attempt. Best of luck to you if you decide to try it!
+
+If you'd like to view my first attempt at this kata, click [here](https://ilyana.dev/blog/2020-06-22-string-calculator-kata-firsttry/). You can also view my most recent attempt [here](https://github.com/ilyanaDev/KataPractice/tree/master/StringCalculator/2020-09-10).
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
