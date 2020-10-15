@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Service Locator Pattern
 date: 2020-10-13T06:04:10.000Z
-featuredpost: true
+featuredpost: false
 featuredimage: /img/service-locator-pattern.png
 description: The Service Locator Pattern decouples an application from its services.
 tags:
