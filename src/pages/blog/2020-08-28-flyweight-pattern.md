@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Flyweight Pattern
 date: 2020-08-28T01:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/flyweight-pattern.png
 description: The Flyweight pattern is intended to improve performance by having one instance of a class provide many virtual instances.
 tags:

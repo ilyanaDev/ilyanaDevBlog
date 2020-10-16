@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Installing Chocolatey
 date: 2020-06-12T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/install-chocolatey.png
 description: Chocolatey is a powerful installation tool I recently began using.
 tags:

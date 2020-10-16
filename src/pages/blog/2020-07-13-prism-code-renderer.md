@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Prism Code Renderer
 date: 2020-07-13T14:07:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/prism-code-renderer.png
 description: The code displayed on my blog now looks very aesthetic. Wondering why? I installed the Prism code renderer.
 tags:

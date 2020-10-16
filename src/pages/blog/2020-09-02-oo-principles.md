@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Object-Oriented Principles Dictionary
 date: 2020-09-02T06:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/oo-principles-dictionary.png
 description: This is a list of important principles of object-oriented programming with definitions, which I will add to as I learn about additional principles.
 tags:

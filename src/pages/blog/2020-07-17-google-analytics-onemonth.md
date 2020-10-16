@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Google Analytics After One Month
 date: 2020-07-17T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/google-analytics-update1.png
 description: One month into Google Analytics - here's what I've learned.
 tags:

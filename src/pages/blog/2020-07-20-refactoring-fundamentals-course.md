@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Notes from Refactoring Fundamentals Pluralsight Course
 date: 2020-07-20T05:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/refactoring-fundamentals-pluralsight.png
 description: Steve Smith's Pluralsight course on Refactoring Fundamentals covers a lot of ground and provides a great overview of common code smells and ways to fix them.
 tags:

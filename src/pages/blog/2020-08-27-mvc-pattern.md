@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The MVC Pattern
 date: 2020-08-27T07:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/mvc-pattern.png
 description: MVC (Model-View-Controller) is a compound pattern commonly used for a variety of applications, particularly web applications. This pattern implements several other design patterns as part of its implementation, which is why it is referred to as a compound pattern.
 tags:

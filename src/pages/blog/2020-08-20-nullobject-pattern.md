@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Null Object Pattern
 date: 2020-08-20T04:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/nullobject-pattern.png
 description: The null object pattern is a simple pattern that attempts to reduce null checks in a program. You might also know it as the Stub, Active Nothing Pattern, or Active Null Pattern.
 

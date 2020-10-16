@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Factory Pattern
 date: 2020-08-14T04:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/factory-pattern.png
 description: The Factory Pattern is used to encapsulate object creation in order to increase flexibility and adhere to the Open-Closed Principle.
 tags:

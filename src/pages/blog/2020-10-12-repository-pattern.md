@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Repository Pattern
 date: 2020-10-12T06:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/repository-pattern.png
 description: The Repository Pattern is used to maintain DRY code in the business logic of applications that need to interact with a data source. It does this by providing an interface between the business logic and data source.
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The FizzBuzz Kata Step-By-Step
 date: 2020-06-16T17:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/fizzbuzz.png
 description: I recently completed the FizzBuzz kata for the first time with test-driven development.
 tags:

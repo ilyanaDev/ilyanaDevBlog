@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Setting up a work Gmail
 date: 2020-06-01T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/setting-up-work-gmail.png
 description: I recently set up a work Gmail account - this is how.
 tags:

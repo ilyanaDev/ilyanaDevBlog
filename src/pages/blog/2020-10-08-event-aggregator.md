@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Event Aggregator Pattern
 date: 2020-10-08T06:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/event-aggregator-pattern.png
 description: The Event Aggregator Pattern aggregates events in complex systems or systems with a large number of events.
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Singleton Pattern
 date: 2020-08-18T04:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/singleton-pattern.png
 description: The Singleton Pattern provides a means of building a class with one and only one instance ever initialized, and that instance is globally available. This seems fairly simple at first, but there are some complicating factors that the pattern helps us consider.
 tags:

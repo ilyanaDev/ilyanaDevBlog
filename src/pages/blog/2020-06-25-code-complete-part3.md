@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Code Complete Part 3 Notes
 date: 2020-06-25T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/code-complete-part3.png
 description: Code Complete by Steve McConnell is a well-written explanation of themes in software construction.
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Setting up a Trello Account
 date: 2020-06-04T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/setting-up-trello.png
 description: Trello is a powerful tool for any sort of organization, from grocery lists to tasks at work.
 tags:

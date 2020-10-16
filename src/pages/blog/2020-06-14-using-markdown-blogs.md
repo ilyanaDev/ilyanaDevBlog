@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Using Markdown in VS Code
 date: 2020-06-14T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/markdown-vscode.png
 description: I use Markdown to write my blog posts, and I've found it very easy to use in VS Code.
 tags:

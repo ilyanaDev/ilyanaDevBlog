@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Adding an RSS Feed to your Gatsby Site
 date: 2020-07-13T14:05:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/rss-feed-gatsby.png
 description: An RSS (really simple syndication) feed allows users using an RSS reader to subscribe to content and be notified when new content is added to a site.
 tags:

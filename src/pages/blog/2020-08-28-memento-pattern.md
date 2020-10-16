@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Memento Pattern
 date: 2020-08-28T04:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/memento-pattern.png
 description: The goal of the Memento Pattern is to implement undo-redo functionality for one or more objects in a system without violating the Single Responsibility Principle (which would be violated if the objects were responsible for their own undo-redo functionality).
 tags:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Facade Pattern
 date: 2020-08-21T05:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/facade-pattern.png
 description: Closely related to the Adapter Pattern, the purpose of the Facade Pattern is to wrap one or more classes in order to simplify the original interface.
 

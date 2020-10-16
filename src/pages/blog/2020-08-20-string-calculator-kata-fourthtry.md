@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The String Calculator Kata - Fourth Attempt
 date: 2020-08-20T17:05:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/stringcalc4.png
 description: Today I undertook the String Calculator kata for the fourth time. I got through five of nine sections in the 30 minutes provided.
 tags:

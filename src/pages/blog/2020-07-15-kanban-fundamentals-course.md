@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Notes from Kanban Fundamentals Pluralsight Course
 date: 2020-07-15T05:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/kanban-pluralsight.png
 description: Steve Smith's Pluralsight course Kanban Fundamentals is a great introduction to the concept of Kanban.
 tags:

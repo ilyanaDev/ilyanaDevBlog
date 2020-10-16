@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Builder Pattern Kata - First Attempt
 date: 2020-07-22T05:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/builder-pattern-kata-1.png
 description: Steve Smith's Builder Kata is a great way to familiarize yourself with the Builder Pattern or to practice it if you've used it before.
 tags:

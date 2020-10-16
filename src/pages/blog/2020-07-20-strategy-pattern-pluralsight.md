@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Notes from Strategy Pattern Pluralsight Course
 date: 2020-07-20T04:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/strategy-pattern-pluralsight.png
 description: The Strategy Pattern is a common pattern that allows the program to select an algorithm/strategy at runtime.
 tags:

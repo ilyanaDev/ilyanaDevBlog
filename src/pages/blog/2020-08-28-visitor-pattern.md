@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: The Visitor Pattern
 date: 2020-08-28T06:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/visitor-pattern.png
 description: The Visitor Pattern is used to create an operation to be performed on elements of a data structure (a list or tree, for example). It essentially creates a new method for each component of that structure, while still adhering to the Open-Closed Principle.
 tags:

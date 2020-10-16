@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Setting up a GitHub Account
 date: 2020-06-06T15:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/setting-up-github.png
 description: GitHub can be used for file organization, source control, and collaboration.
 tags:

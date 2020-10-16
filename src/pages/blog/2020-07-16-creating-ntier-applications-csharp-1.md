@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Notes from Creating N-Tier Applications in C#, Part 1 Pluralsight Course
 date: 2020-07-16T05:04:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/ntier1-pluralsight.png
 description: Steve Smith's Pluralsight course Creating N-Tier Applications in C#, Part 1 does a great job of explaining the basics of N-Tier applications.
 tags:

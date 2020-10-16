@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Adding an RSS Feed to your Gatsby Site - Update- allowing autodiscovery
 date: 2020-07-29T14:05:10.000Z
-featuredpost: false
+featuredpost: true
 featuredimage: /img/rss-feed-gatsby-update2.png
 description: An RSS (really simple syndication) feed allows users using an RSS reader to subscribe to content and be notified when new content is added to a site. I've now added autodiscovery capability to my RSS feed.
 tags:
