@@ -7,7 +7,7 @@ subheading: Follow my journey and learn with me!
 mainpitch:
   title: Welcome!
   description: >
-    Hi, my name is Ilyana, and I'm so excited to have you here! I'm a student entering the professional world of software development, and I look forward to sharing everything I learn with you!
+    Hi, my name is Ilyana, and I'm so excited to have you here! I'm a student entering the professional world of software development, and I look forward to sharing what I learn with you!
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
