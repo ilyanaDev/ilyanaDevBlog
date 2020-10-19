@@ -5,11 +5,11 @@ date: 2020-06-19T15:04:10.000Z
 featuredpost: true
 featuredimage: /img/code-complete-part2.png
 description: Code Complete by Steve McConnell is a well-written explanation of themes in software construction.
-
 tags:
   - codeComplete
   - software development
   - coding
+  - books
 ---
 
 I'm working my way through the second edition of *Code Complete* by Steve McConnell. Here are my notes from **Part 2: Creating High-Quality Code**.

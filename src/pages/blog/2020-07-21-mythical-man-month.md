@@ -7,6 +7,7 @@ featuredimage: /img/mythical-manmonth.png
 description: The Mythical Man-Month by Fred Brooks is considered somewhat of a classic in the world of books about software.
 tags:
   - software development
+  - books
 ---
 
 Indeed, it is near-impossible to read a book about software without some mention of *The Mythical Man-Month*. So I decided to read it and see what it was all about. I read the 1995 edition, which adds a few chapters at the end. Here's what I learned:

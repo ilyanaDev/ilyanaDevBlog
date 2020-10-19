@@ -9,6 +9,7 @@ tags:
   - codeComplete
   - software development
   - coding
+  - books
 ---
 
 I recently finshed the second edition of *Code Complete* by Steve McConnell. Here are my notes from the final section, **Part 7: Software Craftsmanship**.
