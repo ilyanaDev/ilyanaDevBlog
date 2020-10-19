@@ -10,6 +10,7 @@ tags:
   - katas
   - coding
   - string calculator
+  - tdd
 ---
 
 The String Calculator Kata is a great kata for practicing test-driven development. In this kata, you spend 30 minutes trying to complete as many of the 9 sections as possible, but the idea is that you never read ahead - you can only read the step you're on. You can view the instructions [here](https://github.com/ardalis/kata-catalog/blob/master/katas/String%20Calculator.md).
