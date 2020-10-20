@@ -114,5 +114,6 @@ Summary
   * used well with strategy pattern
 * domain-centric design leads to easier testing
 * much easier to start with domain-centric design than to refactor to it later
+* here are my [notes](https://ilyana.dev/blog/2020-10-20-creating-ntier-applications-csharp-2/) from **[Creating N-Tier Applications in C#, Part 2](https://app.pluralsight.com/library/courses/n-tier-csharp-part2/table-of-contents)**.
 
 Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
