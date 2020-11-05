@@ -10,6 +10,7 @@ tags:
   - GitHub
   - command line
   - software development
+  - getting started
 ---
 
 This seemingly simple task can get somewhat complicated if you don't know what you're doing. I've certainly had trouble with this. Here is the easiest way to do this:

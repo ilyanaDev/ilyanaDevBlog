@@ -9,6 +9,7 @@ tags:
   - blogging
   - coding
   - web development
+  - getting started
 ---
 
 Why Use Markdown?
