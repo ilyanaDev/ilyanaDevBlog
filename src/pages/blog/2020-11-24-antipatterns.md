@@ -1,0 +1,143 @@
+---
+templateKey: blog-post
+title: AntiPatterns
+date: 2020-11-24T06:04:10.000Z
+featuredpost: true
+featuredimage: /img/antipatterns.png
+description: An Antipattern is a description of a "negative solution" and a corresponding "positive solution." In other words, an Antipattern describes a common way of solving a problem that actually causes more harm than good, alongside an example of a better way to solve that problem.
+tags:
+  - software development
+  - coding
+  - books
+  - antipatterns
+  - design patterns
+---
+
+This post contains notes from Brown, Malveau, McCormick, and Mowbray's 1998 book *AntiPatterns*.
+
+*Good patterns* applied in *the wrong context* are antipatterns.
+
+"Stovepipe system" - a system that cannot accomadate change
+
+**"Seven deadly sins" of software projects**: the root causes of the pervasive problems
+
+- Haste
+- Apathy
+- Narrow-Mindedness
+- Sloth
+- Avarice
+  - modeling too many details in the higher-level architecture -> overly complicated design -> PROBLEMS!
+- Ignorance
+- Pride
+
+**Prevention** is superior to Correction
+
+## Analysis Paralysis
+
+Sometimes, software teams get mired in the design and planning phase of a project in their search for a "complete" and "perfect" design. Analysis of the problem domain is important to a succesful software project, but when analysis moves out of the problem domain and into the solution domain (i.e. the domain experts no longer understand the analysis), that's a good sign that it is (past) time to stop analysis and get into implementation. Analysis paralysis can be avoided by committing to incremental development. That is, to learning about the problem domain as the solution is crafted, rather than assuming you can know everything up front.
+
+## Architecture by Implication
+
+Essentially, when an architect does not properly document a system because "we just did something like this, so we can rely on that experience," problems usually follow. Even with a similar solution to think back on, having certain specifications properly documented is important to the success of a project. On the other hand, documenting *too* much can also be a problem. There's certainly a balance to keep in mind. Flexibility is important too; the process of planning can be just as important as the plan itself, which is often subject to change.
+
+## The Blob
+
+a.k.a. the God Class
+
+If your architecture has one class that does the majority of the work, and there are a few secondary classes that mostly contain data, you're looking at a blob. Fix it by refactoring and separating the blob's responsibilities out into other classes following the Single Responsibility Principle.
+
+The blob often accompanies the Lava Flow antipattern. It is also related to the Swiss Army Knife antipattern.
+
+## Copy-Paste Programming
+
+Software reuse = good. Copy-pasting code = bad. Why?! Aren't they the same thing? Not at all. The biggest drawback to copy-pasted code is that it's likely to have errors in it (most code does), so even when you notice the error and fix it in the original location, it will persist in the new location until that area of copy-pasted code is also found. Repeated copy-pasting of such a chunk of code within an application can quickly become a maintenance nightmare, where errors are fixed in some places and new errors are introduced as code is modified. Copy-paste programming can be prevented by refactoring the application to support component reuse.
+
+Copy-paste programming often appears alongside spaghetti code.
+
+## Death by Planning
+
+The death by planning antipattern is also referred to as the Glass Case Plan, because death by planning plans are often overly detailed, and progress is not tracked alongside the plan. As a result, the team ends up with software (which is constantly evolving) completely separate from their beautiful (and unchanging) plan sitting all alone in its glass case. The main takeaway from this antipattern is: just because you can plan your project in minute detail does not mean you have complete control over that project - there are a lot of unknowns in software projects. Death by planning can be avoided by focusing on deliverables (rather than on costs) and updating the plan regularly as the project itself evolves.
+
+*Note - in addition to the Glass Case described above, there is another subcase of the Death by Planning Antipattern: The Detailitis Plan, which may be updated, but which still is far too detailed.*
+
+Death by planning is related to Analysis Paralysis.
+
+## Design by Committee
+
+Having "too many cooks in the kitchen," so to speak, can spell out disaster for a software project. When a large group of people (or even just more than one) works together to design a system architecture, the design is often exceedingly complex. It also takes *forever* because all the people have to talk to each other and go back and forth about every little issue. To mitigate design by committee and improve productivity, teams of fewer people can be formed and work can be done to make meetings more focused.
+
+*Note: for certain problems and certain teams, design by committee is not an antipattern. But the committee still needs to be small, and the people need to be very experienced.*
+
+## Functional Decomposition
+
+a.k.a. No Object-Oriented / No OO
+
+Functional decomposition is the result of programmers experienced in structural languages building an application in an object-oriented language. Essentially, developers write a "main" method that calls a number of other methods, each of which is its own class. Fixing this requires a lot of refactoring, especially trying to find better homes for the methods in single-method classes.
+
+## Golden Hammer
+
+When a team is very comfortable with a given tool or approach (the "golden hammer"), to the point where they are *uncomfortable* with any other tool or approach, they will want to use it on every project they encounter. This, of course, isn't great. It's better to put some research into the best tool for a given project, then acquire proficiency with that tool and use it. That's better than using the wrong tool. Imagine using your beloved golden hammer for delicate computer repairs - you'd probably cause many more problems than you'd solve! The golden hammer can be avoided/resolved by ensuring that developers are well educated in the many tools available to software developers and the emerging technologies in the industry. Extended use of a golden hammer can result in lava flow.
+
+## Intellectual Violence
+
+Not to be confused with aggresive negotiations.
+
+When one or more members of a team understand a technique or technology and assume everyone else does too, this can lead to intellectual violence. Essentially, those who do not understand are intimidated by those who do. When the project depends on the use of that technique or technology, intellectual violence can stall the project because those who do not understand may be too intimidated to request an explanation from those who do. This antipattern can be avoided by changing the team's culture and encouraging team members to ask for help and mentor one another.
+
+## Lava Flow
+
+a.k.a. Dead Code
+
+Lava flow is when dead code is left abandoned in the codebase, hardened and impossible to remove. Essentially, someone wrote this code, but now no one knows what it does, so they don't want to mess with it for fear of breaking things. One common cause is extended use of a golden hammer. The solution/prevention is clear architecture. To really work out lava flow requires time spent examining the codebase for dead code and removing it. Thorough testing is very important to this process.
+
+## Poltergeists
+
+Poltergeists are classes with short lifetimes that appear, do something, and disappear again. They are generally used to kick off a process or invoke method(s) in other classes. They are easy to identify, as their names often end with "controller" or a similar suffix. They clutter architecture and make it harder to understand and maintain. Like functional decomposition, poltergeists are often the result of someone inexperienced with object-orientation architecting an object-oriented system. When confronted with poltergeists, developers should call Bill Murray, Dan Akroyd, Harold Ramis, and Ernie Hudson. No, sorry, that's not right. Developers should remove the poltergeist classes and move their functionality into the related classes (the ones the poltergeists were invoking).
+
+## Reinvent the Wheel
+
+Why build custom systems from the ground up when reusable code already exists in similar systems? Why reinvent the wheel? The answer: you shouldn't. Design systems to have reusable components, and then reuse them in other systems.
+
+Reinvent the wheel is related to Stovepipe Enterprise and Stovepipe System.
+
+## Spaghetti Code
+
+Of all the AntiPatterns listed here, this is probably the best-known. It's code that's just a big mess without structure. Likely, spaghetti code will be nearly unreadable, far from [Steve McConnell's](https://ilyana.dev/tags/code-complete/) "Holy Grail of Software Development:" self-documenting code. Instead, this code's functionality is not even clear to its original developer. The lack of structure also leads to code reuse from the spaghetti code system being nearly impossible. In many cases, it might be best just to rewrite chunks of the codebase. If that's not an option, you can refactor to make the codebase more maintainable. One good example is to refactor such that function arguments, etc. are consistent. As Brown, Malveau, McCormick, and Mowbray write, "Even consistently bad Spaghetti Code is easier to maintain than inconsistent Spaghetti Code." As usual, the introduction of unit tests into the codebase will increase maintainability as well. As with poltergeists and functional decomposition, spaghetti code often results from the work of people unfamiliar with object-orientation.
+
+Copy-paste programming often appears alongside spaghetti code. (See what I did there? This sentence is copy-pasted from the section on copy-paste programming!)
+
+## Stovepipe Enterprise
+
+a.k.a. Islands of Automation
+
+A company that independently designs every level of every system is a Stovepipe Enterprise. To avoid this antipattern, an enterprise can define a set of standards across systems. Additionally, management levels of the enterprise can institute policies that make collaboration and technology transfers possible, even across systems.
+
+Reinvent the Wheel and Stovepipe System are related antipatterns.
+
+## Stovepipe System
+
+a.k.a. Legacy System
+
+A stovepipe system is one which is poorly organized and thus difficult to change or extend. Abstractions are not consistent within the system, and hidden dependencies are rampant. A stovepipe system can be improved by abstracting commonalities between subsystems and forming a component architecture. You can read more about legacy code [here](https://ilyana.dev/blog/2020-10-19-legacy-code/).
+
+Reinvent the Wheel and Stovepipe Enterprise are related antipatterns.
+
+## Swiss Army Knife
+
+a.k.a. the Kitchen Sink
+
+A class with an overly complex interface (usually because the designer attempted to account for every possible use of the class) is often referred to as a Swiss army knife. This antipattern can be mitigated by writing a profile for how a complex technology should be used.
+
+The Swiss army knife is related to the Blob antipattern, but the two differ because a design may have multiple Swiss army knives (which are simply classes with overly complex interfaces exposed), but a blob exists as a single class trying to do the work of a whole system.
+
+## Vendor Lock-In
+
+a.k.a. Product-Dependent Architecture
+
+A software project dependent upon an external product is experiencing vendor lock-in. There are a number of disadvantages to this antipattern, chief among them that the team working on the project is at the mercy of a product outside of their control. Note that this is not considered an antipattern when the external product code makes up the majority of the system's code. Vendor lock-in can be mitigated with a layer of insulation between the software project and the vendor product. This technique reminds me of the [Adapter Pattern](https://ilyana.dev/blog/2020-08-21-adapter-pattern/).
+
+## What about Singleton?
+
+If you are asking this question, you are absolutely right. There's an ongoing debate over whether Singleton counts as a pattern or an antipattern, with the consensus (so far as I can tell) being that the design pattern (which has pretty limited applicability to begin with), used incorrectly, becomes an antipattern. If you want to read more about Singleton as a design pattern, you can check out [my blog post](https://ilyana.dev/blog/2020-08-18-singleton-pattern/) about it.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
