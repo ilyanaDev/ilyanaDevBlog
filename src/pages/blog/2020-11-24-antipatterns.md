@@ -13,7 +13,7 @@ tags:
   - design patterns
 ---
 
-This post contains notes from Brown, Malveau, McCormick, and Mowbray's 1998 book *AntiPatterns*.
+This post contains notes from Brown, Malveau, McCormick, and Mowbray's 1998 book *AntiPatterns*, which goes into far more detail than I do here and is definitely worth a read.
 
 *Good patterns* applied in *the wrong context* are antipatterns.
 
