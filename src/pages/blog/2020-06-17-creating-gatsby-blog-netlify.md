@@ -10,6 +10,7 @@ tags:
   - coding
   - command line
   - web development
+  - gatsby
 ---
 
 What is Gatsby?
@@ -86,7 +87,7 @@ Blogging is actually fairly simple. Just create a new Markdown file in `/src/pag
 
 You can now edit the frontmatter to give the post a custom title, image, tags, etc. Again, don't alter the `templateKey` If you've done this correctly, your new blogpost should automatically be visible on your local site. You can delete the sample blog posts' Markdown files before you publish your site, but it can be useful to keep them for the moment to refer back to.
 
-You can now edit the body of your blog post in VS Code. For some tips on writing blog posts in Markdown, click [here]
+You can now edit the body of your blog post in VS Code. For some tips on writing blog posts in Markdown, click [here](https://ilyana.dev/blog/2020-06-14-using-markdown-blogs/).
 
 Connecting with Netlify
 --
