@@ -7,6 +7,7 @@ featuredimage: /img/pumpkin-seeds-title.png
 description: No, this isn't some obscure programming term, I really do mean literal pumpkin seeds.
 tags:
   - pumpkins
+  - personal
 ---
 
 ![Literal Pumpkin Seeds](/img/pumpkin-seeds-stringy.png "Pumpkin seeds... literally")
