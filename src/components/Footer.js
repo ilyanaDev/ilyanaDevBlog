@@ -18,6 +18,7 @@ const Footer = class extends React.Component {
             alt="ilyanaDev"
             style={{ width: '18em', height: '8em' }}
           />
+      <p>Copyright © 2021</p>
         </div>
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
