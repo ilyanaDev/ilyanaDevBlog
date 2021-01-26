@@ -10,6 +10,7 @@ tags:
   - coding
   - pluralsight
   - design patterns
+  - mvc
 ---
 
 *Head First Design Patterns* by Eric Freeman and Elisabeth Freeman gives a pretty good overview of the MVC Pattern in its twelfth chapter.
