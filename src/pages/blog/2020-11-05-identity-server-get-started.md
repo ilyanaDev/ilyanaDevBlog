@@ -406,7 +406,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 Add the following to the home view:
 
-```html
+```
 @using Microsoft.AspNetCore.Authentication
 
 <h2>Claims</h2>
@@ -532,7 +532,7 @@ public IActionResult Logout()
 
 Add to _Layout.cshtml of MvcClient:
 
-```html
+```
 <li class="nav-item">
     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">Logout</a>
 </li>
