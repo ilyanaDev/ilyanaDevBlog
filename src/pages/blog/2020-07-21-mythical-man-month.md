@@ -50,7 +50,7 @@ Chapter 3: The Surgical Team
 
 * A small team of really good programmers is theoretically ideal but is impractical when trying to build large systems quickly (this small team is an efficient but slow method)
 * Harlan mills said you should break a large job up into segments, each to be tackled by a "surgical team" where one person does the cutting and everyone else supports
-  * surgeon = chief programmer - defines specifications; designts, tests, codes program; writes documentation; very experienced and talented
+  * surgeon = chief programmer - defines specifications; designs, tests, codes program; writes documentation; very experienced and talented
   * copilot - less talented surgeon
   * administrator - deals with personnel, raises, space, and interactions with the rest of the organization
   * editor - edits documentation
@@ -113,7 +113,7 @@ Chapter 7: Why did the Tower of Babel Fail?
 * Workbook = structure imposed on documents produced by the project
   * leads to crafted, rather than haphazard, documentation
   * leads to control of information distribution
-* Each programmercan have a loose leaf copy of the workbook, which is easily maintained and added to
+* Each programmer can have a loose leaf copy of the workbook, which is easily maintained and added to
   * with today's (30+ years ago) tech, best done with direct access file marked with change bars and revision dates
 * "The purpose of organization is to reduce the amount of communication"
   * division of labor and specialization of function result in communication being obviated
@@ -249,7 +249,7 @@ Chapter 16: No SIlver Bullet - Essence and Accident in Software Engineering
     * use computer graphics for software design
     * Brooks predicts this won't provide any significant gains
   * Program verification
-    * can really only establish that a program meets its specification, not the validity of the specificationitself
+    * can really only establish that a program meets its specification, not the validity of the specification itself
   * Environments and tools
     * can provide marginal improvements on accidental difficulties
   * Workstations
@@ -264,7 +264,7 @@ Chapter 16: No SIlver Bullet - Essence and Accident in Software Engineering
     * LOTS of potential
   * requirements refinement and rapid prototyping
   * incremental development - "growing" software rather than "building" it
-    * in the 1950s the language moved from "writing" software to "building" it. Brooks argues we must now make the transistion to "growing" software. Though, personally, I think the construction metaphor seems likely to stick around for awhile
+    * in the 1950s the language moved from "writing" software to "building" it. Brooks argues we must now make the transition to "growing" software. Though, personally, I think the construction metaphor seems likely to stick around for awhile
     * necessitates top-down design
   * great designers
     * following good design practices
@@ -298,9 +298,9 @@ Chapter 19: *The Mythical Man-Month* After 20 Years
   * achieved via a *single* architect
 * personal computer revolution means more general-purpose applications are being developed and sold
   * paradoxically, these are harder to design than custom systems
-  * these often feature from featuritis - adding so many features that performance and ease of use are negatively impacted
+  * these often suffer from featuritis - adding so many features that performance and ease of use are negatively impacted
 * The WIMP interface "now" exists
-  * Windows, Icons, Menuse, Pointing interface
+  * Windows, Icons, Menus, Pointing interface
   * essentially what everything uses
   * has great conceptual integrity
   * Brooks predicts WIMP will soon be a thing of the past
