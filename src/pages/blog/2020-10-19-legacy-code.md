@@ -20,7 +20,7 @@ Feathers gives a "working definition" of legacy code as "code without tests."
 * Improve design (refactoring)
 * Optimize resource use
 
-Unit testing is a fantastic way to document what code should do and catch unintentional changes when making changes to your softward. Feathers calls tests intended to catch changes a "software vice," because they prevent your software from changing (not "vice" as in opposite of virtue). Unit tests also run fast and make it easy to pinpoint to cause of failure (as opposed to larger integration tests). Unit tests are not unit tests if they have to interact with a network, database, file system, etc. (i.e. they are only unit tests if they are self-contained).
+Unit testing is a fantastic way to document what code should do and catch unintentional changes when making changes to your software. Feathers calls tests intended to catch changes a "software vice," because they prevent your software from changing (not "vice" as in opposite of virtue). Unit tests also run fast and make it easy to pinpoint to cause of failure (as opposed to larger integration tests). Unit tests are not unit tests if they have to interact with a network, database, file system, etc. (i.e. they are only unit tests if they are self-contained).
 
 "**The Legacy Code Dilemma**: When we change code, we should have tests in place. To put tests in place, we often have to change code.
 

@@ -3,17 +3,13 @@ import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
   title,
   heading,
-  subheading,
   mainpitch,
-  description,
-  intro,
 }) => (
   <div>
     <div
@@ -47,17 +43,7 @@ export const IndexPageTemplate = ({
         >
           {title}
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            backgroundColor: 'rgb(57, 154, 214)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+
       </div>
     </div>
     <section className="section section--gradient">
@@ -115,10 +101,7 @@ const IndexPage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -147,24 +130,8 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
         mainpitch {
           title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
           description
         }
       }
