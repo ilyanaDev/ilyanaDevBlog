@@ -10,4 +10,4 @@ Hi! My name is Ilyana. I am a student studying computer science and aerospace en
 
 You can follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
 
-In addition to computer science and aerospace engineering, I am also interested in documentary filmmaking. If that sounds interesting to you, be sure to take a look at my documentary, [*Up and Down the Years*](https://upanddowntheyears.com/), with tells the story of the Donauschwaben, a group of ethnic Germans expelled from their homelands in southeastern Europe following World War II.
+In addition to computer science and aerospace engineering, I am also interested in documentary filmmaking. If that sounds interesting to you, be sure to take a look at my documentary, [*Up and Down the Years*](https://upanddowntheyears.com/), which tells the story of the Donauschwaben, a group of ethnic Germans expelled from their homelands in southeastern Europe following World War II.
