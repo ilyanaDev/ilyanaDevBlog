@@ -1,0 +1,96 @@
+---
+templateKey: blog-post
+title: Integer Division
+date: 2021-04-17T18:05:10.000Z
+featuredpost: true
+featuredimage: /img/integer-division.png
+description: Until a couple of days ago, I hadn't thought about integer division since my last computer science class. Forgetting about it caused a frustrating error in my code. As a review for experienced developers or an explanation for code newbies, here's what integer division is and how it works.
+tags:
+  - software development
+  - coding
+  - math
+---
+
+## What is integer division?
+
+In integer division, the remainder is discarded. For example, while "normal," or floating-point division of 1 / 4 results in 0.25, integer division of that same expression results in zero. Likewise, 26 / 5 will result in 5 in integer division, but 5.2 in floating-point division.
+
+## What are the rules of integer division...
+
+### In C#?
+
+In C#, the `/` operator will result in an integer result if both operands are integers. If both or either operands are floating-point types (float, double, or decimal), the `/` operator results in floating point division.
+
+```csharp
+var integerDivision = 26 / 5; // = 5
+ var floatDivision = 26 / 5.0; // = 5.2
+```
+
+Additionally, the result of integer division is always rounded towards zero. i.e. it is always truncated:
+
+```csharp
+var integerDivision = -26 / 5; // = -5, not -6
+```
+
+### In other languages?
+
+#### Java
+
+The rules for division in Java are the same as in C#:
+
+```java
+var integerDivision = 26 / 5; // = 5
+ var negativeIntegerDivision = -26 / 5; // = -5
+ var floatingDivision = 26 / 5.0; // = 5.2
+ var negativeFloatingDivision = -26 / 5.0; // = -5.2
+```
+
+#### JavaScript
+
+In JavaScript, the `/` operator always results in floating-point division:
+
+```js
+var quotient = 26 / 5; // = 5.2
+ var negativeQuotient = -26 / 5; // = -5.2
+```
+
+#### Python
+
+In Python, the `//` operator is used as a floor function. This is similar to integer division, but the result is always rounded down, rather than truncated:
+
+```python
+positiveIntegerDivision = 26 // 5 # = 5
+ negativeIntegerDivision = -26 // 5 # = -6
+```
+
+The `/` operator in Python will result in floating-point division:
+
+```python
+positiveFloatDivision = 26 // 5 # = 5.2
+ negativeFloatDivision = -26 // 5 # = -5.2
+```
+
+## Why does it matter?
+
+For me, I ran into integer division because I was trying to calculate an integer percentage via the following:
+
+```csharp
+int part = someNum;
+ int total = someOtherNum;
+ int percentage = 100 * (part / total)
+```
+
+Since `part` was smaller than `total`, the result of the integer division (and it was integer division because both the numerator and denominator were ints) was zero. Revising my code resulted in floating-point division, as I had intended:
+
+```csharp
+double part = someNum;
+ double total = someOtherNum;
+ double decimalPercentage = part/total;
+ int percentage = (int)(100 * decimalPercentage);
+```
+
+I've been coding for several years now, and I'd honestly never thought about integer division versus floating-point division since my last computer science class a couple of years ago. But this just goes to show that these little fundamentals will sneak up and bite you if you forget about them, so it's good to review them every once in a while.
+
+If you code in C#, there's [a helpful page in the docs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators) that provides a reference of all the arithmetic operators and how they work.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
