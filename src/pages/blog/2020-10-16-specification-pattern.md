@@ -16,7 +16,7 @@ tags:
 
 Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course has a module on the Specification Pattern from Steve Smith.
 
-The Specification Pattern is often used in the specification of queries, rules (in the Rules Pattern, and requirements.
+The Specification Pattern is often used in the specification of queries, rules (in the Rules Pattern), and requirements.
 
 The Specification Pattern provides an application with separation of concerns, decoupled classes, and easier testing.
 
