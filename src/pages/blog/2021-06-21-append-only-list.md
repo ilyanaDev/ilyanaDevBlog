@@ -50,7 +50,7 @@ public class AppendOnlyStringList : IEnumerable<string>
 
 As you can see, this was very easy to implement, as all the methods just used the `List<string>` functionality.
 
-For good measure, because [testing is important](https://ardalis.com/what-are-you-working-on-what-test-are-you-trying-to-make-pass/), I added a quick test to make sure my class is doing what it's supposed to:
+For good measure, because [testing is important](https://ardalis.com/what-are-you-working-on-what-test-are-you-trying-to-make-pass/), I added a quick test to make sure my class is doing what it's supposed to do and works as expected:
 
 ```csharp
 [Fact]
@@ -59,7 +59,7 @@ public void AppendsStringsToList()
   var list = new AppendOnlyStringList();
   var testString = "I am a test string";
   var anotherTestString = "Look! I'm another test string!";
-  var oneMoreTestString = "Wow, this is definitely overkill, but no matter!";
+  var oneMoreTestString = "Wow, this is probably overkill, but no matter!";
 
   list.Append(testString);
   list.Append(anotherTestString);
