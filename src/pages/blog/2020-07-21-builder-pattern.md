@@ -4,7 +4,7 @@ title: The Builder Design Pattern
 date: 2020-07-21T06:04:10.000Z
 featuredpost: true
 featuredimage: /img/builder-pattern.png
-description: The Builder Pattern is a useful pattern of object-oriented software that spearates the construction of an object from its representation.
+description: The Builder Pattern is a useful pattern of object-oriented software that separates the construction of an object from its representation.
 tags:
   - software development
   - coding
