@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
               <div className="column is-4">
               </div>
               <div className="column is-4 social">
-              <form action="http://www.google.com/search" method="get">
+              <form action="https://www.google.com/search" method="get">
     <input type="hidden" name="q" value="site:ilyana.dev"/>
     <input type="text" name="q" alt="search"/>
     <input type="submit" value="Search my Site with Google"/>
