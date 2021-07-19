@@ -1,0 +1,139 @@
+---
+templateKey: blog-post
+title: Using Reflection to Set a Private Property in C#
+date: 2021-07-19T18:05:10.000Z
+featuredpost: true
+featuredimage: /img/reflection-private-property.png
+description: When testing a class, you often need to assign a value to a property - a property which you wouldn't otherwise want to allow to be set. In this scenario, reflection can be a valuable tool.
+tags:
+  - software development
+  - coding
+  - testing
+  - c#
+---
+
+## Reflection? What's that?
+
+Reflection is a tool in C# that can be used to access the metadata of a class. It has a number of uses, but it should generally be used as a last resort, as there are some drawbacks. Using reflection can lead to some performance limitations. More importantly, reflection - as you'll see below - allows you to access properties marked as private, protected, internal, etc. Theoretically, those properties were marked as such for a reason, so it's not necessarily a great idea to go and mess with that encapsulation.
+
+However, in this case, we have a good reason: testing. Test code can bend rules that production code cannot. Below is a good use-case scenario for reflection.
+
+## The Problem
+
+Imagine a `Member` class in a gym's user management appliection. A `Member` probably has some basic properties like `Name`, `Email`, `SubscriptionPlan`, etc. Another important property might be `DateJoined`.
+
+```csharp
+public class Member
+{
+  public string Name {get; set;}
+  public string Email {get; set;}
+  public SubscriptionPlan SubscriptionPlan {get; set;}
+  public DateTime DateJoined {get; private set;}
+
+  public Member(string name, string email, SubscriptionPlan subscriptionPlan)
+  {
+    Name = name;
+    Email = email;
+    SubscriptionPlan = subscriptionPlan;
+    DateJoined = DateTime.Today;
+  }
+
+  // other code here
+}
+```
+
+Above, `DateJoined` has a private setter and is set to `DateTime.Today` in the constructor. There is virtually no scenario in which you would want to change the value of `DateJoined`. Therefore, there is no reason to give this property a public setter and it is probably a bad idea to do so.
+
+Alright, fair enough. But what if I want to test the `CheckIfMemberNeedsAnniversaryGift` method of `AnniversaryGiftService`? Now things get tricky.
+
+```csharp
+public class AnniversaryGiftService
+{
+  public void SendGiftIfNeeded(Member member)
+  {
+    if (CheckIfMemberNeedsAnniversaryGift(member)) SendAnniversaryGift();
+  }
+
+  public bool CheckIfMemberNeedsAnniversaryGift(Member member)
+  {
+    return (member.DateJoined.Day == DateTime.Today.Day &&
+      member.DateJoined.Month == DateTime.Today.Month);
+  }
+
+  public void SendAnniversaryGift()
+  {
+    // some code
+  }
+}
+```
+
+As you can see, the logic of `CheckIfMemberNeedsAnniversaryGift` is entirely dependent on `member`'s `DateJoined`. But as discussed above, `DateJoined` has a private setter. So how can we test this method?
+
+You guessed it - reflection!
+
+## The Solution
+
+One implementation of reflection, which we will use here, involves using extension methods to set the private `DateJoined` property of `Member`:
+
+```csharp
+public static class ReflectionHelperExtensionMethods
+{
+  // from https://stackoverflow.com/a/1565766/13680266
+  public static void SetPrivateDateTimePropertyValue(this Member member, string propName, DateTime newValue)
+  {
+    PropertyInfo propertyInfo = typeof(Member).GetProperty(propName);
+    if (propertyInfo == null) return;
+    propertyInfo.SetValue(member, newValue);
+  }
+}
+```
+
+Essentially, the above code scans the metadata of the `Member` class to find a property of the name passed in. In this case, we would pass `"DateJoined"`, and then the `SetValue` method above would set that property to `newValue`, without regard for that property being marked `private`.
+
+*If you're unfamiliar with extension methods, [this article](https://ardalis.com/keep-tests-short-and-dry-with-extensions/) provides a nice overview of their use in tests.*
+
+Finally, here is the test we can write now that the reflection extension method is set up:
+
+```csharp
+public static class AnniversaryGiftServiceCheckIfMemberNeedsAnniversaryGift
+{
+  // other code omitted
+
+  [Test]
+  public void ReturnsTrueGivenMemberWithDateJoined1YearAgo
+  {
+    var testMember = new Member("testName", "testEmail", "testSubscriptionPlan");
+
+    // use reflection to set DateJoined property
+    testMember.SetPrivateDateTimePropertyValue("DateJoined", DateTime.Today.AddYears(-1));
+
+    var memberNeedsAnniversaryGift = _anniversaryGiftService.CheckIfMemberNeedsAnniversaryGift(testMember);
+
+    Assert.True(memberNeedsAnniversaryGift);
+  }
+}
+```
+
+## Conclusion
+
+This was a pretty simple use case. In fact, we could have omitted the `propName` parameter of `SetPrivateDateTimePropertyValue` and renamed it to `SetDateJoinedPropertyValue`:
+
+```csharp
+// from https://stackoverflow.com/a/1565766/13680266
+public static void SetDateJoinedPropertyValue(this Member member, DateTime newValue)
+{
+  PropertyInfo propertyInfo = typeof(Member).GetProperty("DateJoined");
+  if (propertyInfo == null) return;
+  propertyInfo.SetValue(member, newValue);
+}
+```
+
+However, this diminishes flexibility later on if `Member` gets more complex and has more `DateTime` properties with private setters, like a `DateOfSubscriptionExpiration`, for example. The `propName` parameter allows us to use the above method with more flexibility in a more complex and less contrived use case.
+
+## Resources
+
+The [StackOverflow thread](https://stackoverflow.com/questions/1565734/is-it-possible-to-set-private-property-via-reflection) that explains how to use reflection to set a private property, as we did above.
+
+A [C# Corner article](https://www.c-sharpcorner.com/UploadFile/keesari_anjaiah/reflection-in-net/) explaining reflection and its uses in detail.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

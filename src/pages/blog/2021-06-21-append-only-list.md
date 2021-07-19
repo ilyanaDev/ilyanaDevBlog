@@ -9,6 +9,7 @@ tags:
   - software development
   - coding
   - testing
+  - c#
 ---
 
 I was working on a project recently where I needed exactly this functionality. Towards that end, I created a `AppendOnlyStringList` wrapper class. There are other ways I could have done this (and if you have other ideas on how to implement this, let me know in the chat below!), but as I'm comfortable with using Lists I decided to take the following approach:

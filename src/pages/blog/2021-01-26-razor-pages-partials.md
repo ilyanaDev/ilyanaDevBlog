@@ -10,6 +10,7 @@ tags:
   - mvc
   - software development
   - coding
+  - c#
 ---
 
 I'm currently working on a project to add a checkout interface to a web app, but due to some quirks of the payment provider we are using, there need to be two checkout pages: one for a monthly subscription, and one for an annual subscription. Since the only real difference between these two is the name and price of the plan at the top of the page and the information being passed to the payment provider, the pages are nearly identical. Obviously, this violates the [DRY Principle](https://deviq.com/principles/dont-repeat-yourself).

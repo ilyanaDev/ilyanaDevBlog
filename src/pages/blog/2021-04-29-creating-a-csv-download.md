@@ -10,6 +10,7 @@ tags:
   - coding
   - csv
   - razor pages
+  - c#
 ---
 
 And in truth, downloading a csv is not all that complex at all. But since the internet gave conflicting advice, and it took me almost two hours to figure it out, here's what worked for me.
