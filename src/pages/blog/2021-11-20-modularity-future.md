@@ -28,6 +28,10 @@ Dr. Roesler's lecture focused in large part on - you guesssed it - modularity! H
 
 It used to be that if you wanted to put a satellite in orbit, you needed to design a schoolbus-sized monstrosity, and you needed to design every inch of it - the solar panels, the sensors, the communications equipment (the "utilities," essentially), in addition to whatever you were actually trying to accomplish with this satellite. And when you wanted to upgrade your equipment (get better batteries/solar panels, improve your sensors, etc.), that meant it was time to start designing your next bus-sized satellite.
 
+![Hubble Space Telescope](/img/hubble_service.jpg)
+
+*[Image source](https://www.nasa.gov/content/about-the-hubble-story)*
+
 But as I learned from Dr. Roesler's talk, the industry is trending away from this paradigm. [CubeSats](https://en.wikipedia.org/wiki/CubeSat) and similar developments have already begun this transformation, but Dr. Roesler envisions a future of orbital infrastructure driven by modular satellite components. If you build a satellite with modular "utility" components, then if a solar panel is cracked by a micrometeorite, you can just swap it out without having to send up a whole new satellite. If you build a satellite with other modular components, then you can swap those out too as they break or technology improves. For example, the Hubble Space Telescope was actually [designed modularly](https://www.nasa.gov/content/about-the-hubble-story) because it was intended to be serviced by astronauts during the shuttle program. Because Hubble is modular, as technology improved, components of the telescope could be replaced with better, newer versions - and this has been done 5 times since Hubble launched in 1990! 
 
 Modularity first collided with space travel in the 1980s when the Soviet space station, Mir, launched. Mir was the [first modular space station](https://www.nasa.gov/feature/35-years-ago-launch-of-mir-space-station-s-first-module) and had a huge influence on the design of the International Space Station, which is, of course, modular:
