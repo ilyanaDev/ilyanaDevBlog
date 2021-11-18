@@ -16,13 +16,15 @@ tags:
 
 Modularity simply refers to something that can easily be removed from a larger whole and replaced with something else. And, depending on the context, that something else might be a better version of that original thing, or it might be something else entirely.
 
-Think about the difference between a mess of spaghetti code, compared with a clean and well-defined architecture. Recall the basic principle of depending on an interface rather than on an implementation - so that when a better implementation is created, it can just be plugged into the larger whole without much difficulty at all. 
+Think about the difference between a mess of spaghetti code, compared with a clean and well-defined architecture. Recall the basic principle of depending on an interface rather than on an implementation - so that when a better implementation is created, it can just be plugged into the larger whole without much difficulty at all. Or imagine a USB or HDMI port: if you have any device, be it a mouse or a speaker or a DVD player, you can plug it into your computer's USB port and suddenly your computer has a new component that gives it functionality it didn't have before. Without USB or HDMI or all the other ports on your computer, you'd be limited to the functionality built into that computer.
+
+*Note: Coding to an interface, rather than an implementation means that if one piece of your code is dependent on a second piece of code, you should design that first piece to be dependent on* what *that second piece does, rather than* how *it does it. For example, if you have a program that depends on a function that calculates the factorial of a given number, it shouldn't matter at all to that program how the factorial function calculates the factorial (e.g. iteratively, recursively), only that if the program gives the factorial function a number, that number's factorial will be the output. This gets into encapsulation and information hiding in general.* 
 
 ## What does that have to do with space travel?
 
 Everything, actually.
 
-A few months ago, Dr. Gordon Roesler gave a lecture to my Aerospace 200 class about sustainability and logisitcs in space. (and you can tell from how long it's taken me to write this article just how busy that class and others are keeping me!)
+A few months ago, Dr. Gordon Roesler gave a lecture to my Aerospace 200 class about sustainability and logistics in space. (and you can tell from how long it's taken me to write this article just how busy that class and others are keeping me!)
 
 Dr. Roesler's lecture focused in large part on - you guesssed it - modularity! He had some really interesting insights into projects currently being developed for satellites that can be made more modular and therefore more sustainable.
 
@@ -32,7 +34,7 @@ It used to be that if you wanted to put a satellite in orbit, you needed to desi
 
 *[Image source](https://www.nasa.gov/content/about-the-hubble-story)*
 
-But as I learned from Dr. Roesler's talk, the industry is trending away from this paradigm. [CubeSats](https://en.wikipedia.org/wiki/CubeSat) and similar developments have already begun this transformation, but Dr. Roesler envisions a future of orbital infrastructure driven by modular satellite components. If you build a satellite with modular "utility" components, then if a solar panel is cracked by a micrometeorite, you can just swap it out without having to send up a whole new satellite. If you build a satellite with other modular components, then you can swap those out too as they break or technology improves. For example, the Hubble Space Telescope was actually [designed modularly](https://www.nasa.gov/content/about-the-hubble-story) because it was intended to be serviced by astronauts during the shuttle program. Because Hubble is modular, as technology improved, components of the telescope could be replaced with better, newer versions - and this has been done 5 times since Hubble launched in 1990! 
+But as I learned from Dr. Roesler's talk, the industry is trending away from this paradigm. [CubeSats](https://en.wikipedia.org/wiki/CubeSat) and similar developments have already begun this transformation, but Dr. Roesler envisions a future of orbital infrastructure driven by modular satellite components. If you build a satellite with modular "utility" components, then if a solar panel is cracked by a micrometeorite, you can just swap it out without having to send up a whole new satellite. If you build a satellite with other modular components, then you can swap those out too as they break or technology improves. For example, the Hubble Space Telescope was actually [designed modularly](https://www.nasa.gov/content/about-the-hubble-story) because it was intended to be serviced by astronauts during the shuttle program. Because Hubble is modular, as technology improved, components of the telescope could be replaced with better, newer versions - and was done 5 times since Hubble launched in 1990! 
 
 Modularity first collided with space travel in the 1980s when the Soviet space station, Mir, launched. Mir was the [first modular space station](https://www.nasa.gov/feature/35-years-ago-launch-of-mir-space-station-s-first-module) and had a huge influence on the design of the International Space Station, which is, of course, modular:
 
