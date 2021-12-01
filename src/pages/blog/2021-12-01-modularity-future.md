@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Modularity - The Shared Future of Computer Science and Space Travel
-date: 2021-11-20T18:05:10.000Z
+date: 2021-12-01T18:05:10.000Z
 featuredpost: true
 featuredimage: /img/modularity.png
 description: You might not normally see much in common between aerospace engineering and computer science. And in a lot of cases, you'd be right. But both these industries are and have been trending towards one common goal - modularity.
