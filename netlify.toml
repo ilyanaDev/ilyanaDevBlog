@@ -3,6 +3,7 @@
   command = "npm run build"
   functions = "lambda"
 [build.environment]
-  NODE_VERSION = "18"
-  YARN_VERSION = "1.22.4"
-  YARN_FLAGS = "--no-ignore-optional"
+  NODE_VERSION = "16.18.0"
+  NPM_FLAGS = "--legacy-peer-deps"
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"
