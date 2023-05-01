@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -46,23 +45,6 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    //blog post list pages
-    const postsPerPage = 10;
-    const numPages = Math.ceil(posts.length / postsPerPage);
-
-    Array.from({ length: numPages }).forEach((_, i) => {
-      createPage({
-        path: i === 0 ? `/blog` : `/blog/page/${i + 1}`,
-        component: path.resolve('./src/templates/bloglist.js'),
-        context: {
-          limit: postsPerPage,
-          skip: i * postsPerPage,
-          numPages,
-          currentPage: i + 1,
-        }
-      });
-    });
-
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
@@ -91,7 +73,6 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })

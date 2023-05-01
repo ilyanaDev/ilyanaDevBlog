@@ -3,7 +3,7 @@ templateKey: blog-post
 title: CodeMash Presentation
 date: 2023-01-04T18:05:10.000Z
 featuredpost: true
-featuredimage: /img/codemash-talk.png
+featuredimage: /img/profile.png
 description: In just over a week, I will be giving a presentation at CodeMash, a computer science conference in Sandusky, Ohio. I'm really excited about having been selected as a speaker, albeit a bit nervous about the talk as well!
 tags:
   - aerospace

@@ -1,15 +1,19 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About Me
+title: About our values
 ---
+### Shade-grown coffee
+Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-![Profile](/img/profile.png "profile image")
+### Single origin
+Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
 
-Hi! My name is Ilyana Smith. I'm a student studying aerospace engineering at the University of Michigan. I am also minoring in computer science and German. Currently, I'm an intern at NASA Langley Research Center*. Previously, I spent a year working for a software consulting company. Now I code for class and wish I had more time to code for fun. I enjoy sharing what I'm learning with you. I've been coding for several years now, and I've learned a lot in that time. I focus mainly on C# and C++, with some experience in Java and web development. Wherever you are in your own journey, I hope you'll find what I share useful.
+### Sustainable farming
+Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
 
-You can follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
+### Direct sourcing
+Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
 
-In addition to computer science and aerospace engineering, I am also interested in documentary filmmaking. If that sounds interesting to you, be sure to take a look at my documentary, [*Up and Down the Years*](https://upanddowntheyears.com/), which tells the story of the Donauschwaben, a group of ethnic Germans expelled from their homelands in southeastern Europe following World War II.
-
-\**The views and opinions expressed in my blog are my own and do not necessarily reflect those of NASA. No official endorsement is intended or implied.* 
+### Reinvest profits
+We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
