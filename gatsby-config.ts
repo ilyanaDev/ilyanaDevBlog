@@ -67,7 +67,7 @@ const config: GatsbyConfig = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#6B46C1`,
         display: `standalone`,
-        icon: 'static\\ilyanadev-icon.png',
+        icon: 'static/ilyanadev-icon.png',
       },
     },
     {
