@@ -1,0 +1,31 @@
+---
+title: The Memento Pattern
+date: 2020-08-28T04:04:10.000Z
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - design patterns
+---
+
+![](memento-pattern.png)
+
+The goal of the Memento Pattern is to implement undo-redo functionality for one or more objects in a system without violating the Single Responsibility Principle (which would be violated if the objects were responsible for their own undo-redo functionality).
+ 
+*Head First Design Patterns* by Eric Freeman and Elisabeth Freeman provides a quick overview of the Memento Pattern in its appendix.
+
+Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course has a module on the Memento Pattern from Steve Smith.
+
+The job of the Memento is to save the important state of an important object in a system, in order to acheive that undo-redo functionality.
+
+The Memento Pattern can be applied in conjunction with the [Command Pattern](https://ilyana.dev/blog/2020-08-20-command-pattern/) or [Iterator Pattern](https://ilyana.dev/blog/2020-08-25-iterator-pattern/) pretty effectively to implement undo-redo functionality within those other patterns.
+
+Essentially, the memento object is a very simple object with a single property, a saved state from another object (known as the originator). When the originator needs to revert to a prior state, it calls on the memento object to provide the saved state. Sometimes a caretaker object is also implemented, to maintain the memento object(s); this is the case especially when implementing a history of previous states, rather than just the most recent previous state. In addition to a caretaker, an undo-redo history implementation often involves stacks.
+
+If storing a state is too expensive, the Memento Pattern can also be implemented by storing a reverse operation for each operation that is performed on the originator. Thus, to implement undo, the reverse operation has to be called to return the originator to the previous state, rather than the memento having to know exactly what that state was. This generally only works with simple operations, since more complex operations may have side effects that are not counteracted with a reverse operation.
+
+If you've seen the movie *Memento*, you may notice that the memento object is a lot like the photos and other clues the main character leaves himself to help his future self figure out what's going on. He is like the originator in the Memento Pattern. Since the premise of the movie is that the main character cannot create new memories, whenever he forgets again, he has to look at his mementoes, his clues, to get an idea of what's happened and approximate a return to his prior state (before he forgot).
+
+If you haven't seen the movie, it's a really cool, mindbending film.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

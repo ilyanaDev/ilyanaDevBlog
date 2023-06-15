@@ -1,0 +1,22 @@
+---
+title: What is a GUID?
+date: 2020-12-09T15:04:10.000Z
+tags:
+  - software development
+  - coding
+  - guid
+---
+
+![](guid.png)
+
+As someone relatively new to programming, I often come across bits of jargon and terminology that I am unfamiliar with. Recently, I've been seeing a lot about GUIDs in various projects I've looked at, but I had no idea what that really meant; only that it seemed to have something to do with identifying a given object.
+
+So what is a GUID? Well, it's a 128-bit number generated in such a way as to make the probability of duplication negligible. Typically, this number is represented by 32 hexadecimal digits. The method of generation can vary depending on the situation. Common methods include random generation and time-based generation.
+
+GUIDs can be assigned to objects in your code in order to establish object identity with a unique identifier (the GUID) that is not dependent on a central service assigning an identifier to each object (i.e. by assigning the first object identity "1", the next object identity "2", etc.).
+
+"GUID" (Globally Unique Identifier) is the term generally used within Microsoft software, while "UUID" (Universally Unique Identifier) is used elsewhere. Personally, I've never seen UUID, but most (if not all) of the code I've seen referencing GUIDs has been in .NET.
+
+I'll leave you with [this Wikipedia page](https://en.wikipedia.org/wiki/Universally_unique_identifier) (which is the source of all the information in this quick post), which has a lot of in-depth information about GUIDs/UUIDs.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

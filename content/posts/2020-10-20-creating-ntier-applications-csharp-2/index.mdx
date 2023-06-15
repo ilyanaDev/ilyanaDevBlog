@@ -1,0 +1,49 @@
+---
+title: Notes from Creating N-Tier Applications in C#, Part 2 Pluralsight Course
+date: 2020-10-20T05:04:10.000Z
+tags:
+  - software development
+  - coding
+  - pluralsight
+---
+
+![](ntier2-pluralsight.png)
+
+Steve Smith's Pluralsight course Creating N-Tier Applications in C#, Part 2 goes into more detail about N-Tier Applications.
+
+I recently completed **[Creating N-Tier Applications in C#, Part 2](https://app.pluralsight.com/library/courses/n-tier-csharp-part2/table-of-contents)** by Steve Smith.
+
+Here are [my notes](https://ilyana.dev/blog/2020-07-16-creating-ntier-applications-csharp-1/) from **[Creating N-Tier Applications in C#, Part 1](https://app.pluralsight.com/library/courses/n-tier-apps-part1/table-of-contents)**.
+
+Here are my notes from Part 2:
+
+Testing
+--
+
+- Unit tests in an n-tier application should generally only care about one of your tiers (which should be in its own project file); integration tests will likely care about several tiers, and possibly also have some external dependencies on databases, etc.
+- Mocks are a useful tool in unit tests, but should generally be used for tests of behavior, rather than tests of state
+- If you're working in a shared repository, you should run all tests before checking in (also, make sure you're using the latest version and make sure your code builds)
+
+Persistence
+--
+
+- All objects in an application are constructed, then spend some time being active and perhaps are modified. Finally they are disposed of.
+- Objects should know nothing about if/how they are persisted (SRP!)
+- It's important that objects are consistent throughout the application
+  - This is most applicable in scenarios where changes are made and then saved
+- "An interface should be designed to make the wrong things hard and the right things easy."
+- Object-Relational Mappers (ORMs) (e.g. Microsoft Entity Framework)
+  - Code-First Entity Framework - create entities and tell Entity Framework to map them to the database
+- Consider [The Repository Pattern](https://ilyana.dev/blog/2020-10-12-repository-pattern/) and/or [The Unit of Work Pattern](https://ilyana.dev/blog/2020-10-14-unit-of-work-pattern/)
+
+Core Logic Reuse
+--
+
+- "Holy Grail of Software" = code reuse
+  - software components should be like LEGOs
+- Dependency Inversion Principle -> depend on interfaces, not specific implementation
+  - related to IOC containers, which are essentially "factories on steroids"
+  - aids code reuse
+- DTO = Data Transfer Object - typically a class full of data, no behavior
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

@@ -1,0 +1,37 @@
+---
+title: Blazor Basics
+date: 2021-02-21T15:04:10.000Z
+tags:
+  - software development
+  - coding
+  - blazor
+---
+
+![](blazor-basics.png)
+
+Blazor is a framework that allows programmers to use C# to develop interactive client-side web applications.
+
+Rather than using a JavaScript framework like Angular or React to write the UI portion of the code, programmers can use Blazor to write the client-side code in C#.
+
+## How it works
+
+Blazor runs on top of [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts), which is a low-level language designed to allow languages like C# to be run alongside JavaScript on the web without requiring a plugin. Essentially, the .NET DLLs making up your application can be run on a .NET runtime that is compiled into WebAssembly. This .NET runtime will run in WebAssembly, which in turn runs in the JavaScript runtime on the browser, just like native JavaScript.
+
+*Note: this article describes Blazor WebAssembly apps, which differ somewhat from Blazor Server apps, which use SignalR and run on a server, rather than in the browser. Blazor Server apps can be safer for storing secrets and can still call JavaScript, but they are slower than Blazor WebAssembly apps, since they need to constantly talk back-and-forth with the server.*
+
+## Benefits
+
+- No plugins required, as WebAssembly is part of all major browsers, including mobile browsers (which typically do not support plugins)
+- Blazor/WebAssembly allows for near-native speed/performance
+- The C# code in your Blazor application can call JavaScript, and JavaScript can call that C# code
+- Use C# in the browser!
+
+## References
+
+For more information, check out the following:
+
+- [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
+- [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/Concepts)
+- Pluralsight Course on [Blazor](https://app.pluralsight.com/library/courses/blazor-big-picture/table-of-contents)
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
