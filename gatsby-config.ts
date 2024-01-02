@@ -23,6 +23,7 @@ const config: GatsbyConfig = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        formatString: "LL",
         navigation: [
           {
             title: `Blog`,
