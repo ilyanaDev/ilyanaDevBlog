@@ -1,0 +1,25 @@
+---
+title: The Service Locator Pattern
+date: 2020-10-13T06:04:10.000Z
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - design patterns
+---
+
+![](service-locator-pattern.png)
+
+The Service Locator Pattern decouples an application from its services.
+
+Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course has a module on the Service Locator Pattern from John Brown.
+
+Service Locators are often useful in the implementation of logging because it is independent of specific business functions and is used throughout the application, but is often changed based on environmental needs. A Service Locator can be used to abstract the logger from the application, allowing the code to follow the Open/Closed Pattern.
+
+**"Abstract the application from the services it uses"** - sit between the application and its services to simplify their interactions. In this way, it reminds me a bit of the Repository Pattern.
+
+Some drawbacks to Service Locator: it is global, and a service it refers to may not be loaded.
+
+This pattern can benefit from the [Observer](https://ilyana.dev/blog/2020-08-07-observer-pattern/), [Proxy](https://ilyana.dev/blog/2020-08-26-proxy-pattern/), and [Adapter](https://ilyana.dev/blog/2020-08-21-adapter-pattern/) Design Patterns being used alongside it.
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

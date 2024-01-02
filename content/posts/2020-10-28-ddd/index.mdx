@@ -1,0 +1,172 @@
+---
+title: Domain-Driven Design
+date: 2020-10-28T15:04:10.000Z
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - ddd
+  - getting started
+---
+
+![](ddd.png)
+
+I'm still pretty new to software development, so until recently I was very foggy on Domain-Driven Design (DDD). Here are the basics.
+
+Firstly, I just want to point out something that I found confusing at first. Even though I know that TDD stands for Test-Driven *Development* and DDD stands for Domain-Driven *Design*, I had this weird equivalency in my mind before I really started looking into DDD. For anyone as confused as I was, there's not really an equivalency there. They're entirely different things.
+
+DDD was first introduced in Eric Evans's 2003 book *Domain-Driven Design: Tackling Complexity in the Heart of Software*, which many consider a must-read of software developers. (Although I can't personally comment on that front, as I have yet to read the book)
+
+DDD is **not** a one-size-fits-all silver bullet. It's most applicable in complex domains (as the name suggests), particularly when the client finds it difficult to communicate their needs to the developers. Keep in mind that *technical* complexity is different from domain complexity. However, it does encompass a number of patterns which can be applied to various situations. Example: DDD would be overkill in an application that just needs CRUD (create, remove, update, delete) logic.
+
+However, where DDD **is** applicable, it is very helpful. It simplifies design in a complex system and makes future extensions and maintenance far easier.
+
+Benefits of DDD
+--
+
+- Flexibility
+- Final design closer to client's vision
+- Clear path through the complex problem
+- Easy testing
+- Good organization
+- Encapsualted business logic
+- Many patterns that can be used in different projects
+
+Drawbacks
+--
+
+- Lots of time spent figuring out the domain and subdomains
+- Quite a learning curve as DDD is complex
+
+Basic Concepts of DDD
+--
+
+A big piece of DDD is **solving problems via an understanding of client needs**. Write code to build software to fulfill client needs and solve problems - the problem solving is the real goal here. "People don't want to buy a quarter-inch drill; they want to buy quarter-inch holes" (DDD Course on Pluralsight).
+
+It's also important to *really* **communicate with the experts in a given domain**. A big piece of this is talking about the problem in the language of the problem, rather than in the language of the software that you'll use to solve the problem. Talking in the language of the problem doesn't just apply to DDD; it's related to the larger topic of maintaining a consistent level of abstraction in your code and the way you talk about your code.
+
+- Talking in the lanugage of the problem also helps avoid communication issues; Steve Smith likes to list the ways software developers fail as "we build the thing wrong, or we build the wrong thing."
+- Additionally, as the [DDD Fundamentals course](https://app.pluralsight.com/library/courses/domain-driven-design-fundamentals/table-of-contents) on Pluralsight demonstrates very well, it's the developer's job to communicate with the client in their language. You shouldn't expect your client, who's an expert in say, veterinary medicine, or personell management, to learn the language of software development. It's up to you to speak in the client's language to facilitate understanding.
+- **Ubiquitous Language** refers to all the (particularly non-software) terms and their definitions (which all parties understand and agree on) being used in the project
+
+Another important concept: **focus on one sub-domain at a time**.
+
+- **bounded context** - a region of the application where consistent behavior is expected; one region of the application may require a Client class with birthdate information *and* name, while another region may only care about the name. It's important to keep these regions separate to preserve consistent behavior and conceptual integrity (which [The Mythical Man-Month](https://ilyana.dev/blog/2020-07-21-mythical-man-month/) talks about a lot)
+  - Any given model is only applicable within a context, and it should remain consistent within that context. This context-model relationship should be explicitly defined
+  - bounded contexts do not always refer to separate solutions, but definitely separate areas of a solution, if not separate solutions
+  - Each context, ideally, has its own team, structure, etc. But this is not terribly common in the real world. It's good to keep the separation mentally, at least. For example, it's much better if infrastructure like databases are kept separate, but again, this is less common unless its an extremely complex application
+- **Sub-domain** is to problem space as bounded context is to solution space
+  - sub-domain is abstracted to the level of the problem (real-world), while bounded context is not as abstract because it's at the level of the solution (software)
+  - sometimes bounded context is shaped to fit the sub-domain, sometimes not. The latter is often the case in legacy code
+- **Shared Kernel** - a section of code/infrastructure that is shared between contexts. Developers do not change this without consulting people working on each context sharing that kernel!
+  - Julie Lerman: "trade-off between code reuse and consistency and the overhead" of sharing things between contexts
+
+**Implementation of sub-domains should fulfil the Single Responsibility Principle** - focus on the sub-domain you're working on implementing, nothing else.
+
+Domain Models
+--
+
+- Focus on behavior, not classes
+  - That's because the domain is really about behavior. Classes are a software concept, which is irrelevant to the domain
+- "Anemic" domain models focus on object state
+  - applications that focus on object state are fine. There are a lot of problems they can solve. *However*, if you've decided your domain is complex enough to justify using DDD, it's probably complex enough that simple object state, CRUD, etc. logic just isn't going to cut it.
+  - considered an antipattern in DDD
+- "Rich" domain models focus on behavior and business logic
+- **Entities** - objects which are defined by their identity (rather than by their attributes)
+  - Kept track of via a key, since the properties are subject to change and not by definition representative of that object
+  - Should be responsible for identity and lifecycle
+- **Value Objects** - objects defined by their value; immutable
+  - e.g. strings, dates, money (money is defined by amount, units, and point in time; it is a completely different value if any of these changes)
+  - can contain logic. But that logic has *no side effects*
+  - should be used instead of entities when possible. You can also bundle some of an entity's properties into value objects, where it makes sense
+- **Domain Services** - operations that don't belong to an entity or value object
+  - stateless, but may have side effects
+  - should be utilized only when it makes sense, or you'll end up with an anemic domain model
+  - part of application's Core layer
+- Domain Models should be simple
+  - Avoid bi-directional relationships (X has Y **and** Y has X), as these often lead to excess complexity - YAGNI (You Ain't Gonna Need It)
+
+Aggregates
+--
+
+**Aggregates** are sets of entities and/or value objects that change together. Every aggregate has an **aggregate root** which is the parent of all objects in the aggregate. This root can be determined by asking: "if I delete this member of the aggregate, do I need to delete the others?" ("cascading delete") If the answer is yes, that object is the root. For example, if a Person object gets rid of its Phone Number, this is not cause for deletion of the Person. But if the Person is deleted, the Phone Number should also be deleted, so the Person is the root. A unidirectional relationship between the root and other objects in the aggregate should run from the root to the other objects. The root can reference the other objects, and *only* the root can reference those objects.
+
+You can also have an aggregate that only contains one object.
+
+Data changes to an aggregate should be Atomic (all or none of the transaction), Consistent (rules are enforced), Isolated (no conflicts from syncronous commits), and Durable (should be able to be retrieved even if system fails) (ACID).
+
+**Invariants** - rules in an application that must be followed in order for the model to be valid. A real-world example would be the speed of light. The aggregate root should be responsible for enforcing invariants.
+
+Finally, *only* use aggregates when they will decrease complexity.
+
+Repositories
+--
+
+Remember the [Repository Pattern](https://ilyana.dev/blog/2020-10-12-repository-pattern/)? Well, that comes from DDD!
+
+A **repository** controls data access in order to maintain consistency. It is responsible for object persistence.
+
+A repository's interface should be an "illusion of a collection," according to Julie Lerman. It can also provide methods for common queries, to keep code DRY.
+
+Repositories should be provided only for aggregate roots.
+
+Domain Events
+--
+
+**Domian Events** describe state changes and take responsibility for the activities that should take place when an event takes place, rather than the objects pushing those events having that responsibility. Domain events are *classes*. They're important to the domain model and should be in the model's ubiquitous language, etc. This is different from how events behave in many UI models, where they are generally handled by methods instead.
+
+You should consider modeling behavior as a domain event when you describe the behavior as an "if this-then that" statement where the "that" doesn't belong to the class performing the "this."
+
+Domain events should have all the necessary information to convey their message, but they should not contain excess information.
+
+Additional Notes
+--
+
+- In a project with several segments, you may have one subdomain where Domain-Driven Design is worth implementing, while other areas may be much simpler and may only require CRUD functionality. It's entirely possible (and advisable) to apply DDD only to that segment which requires it
+- DDD Entities generally use Guids for their IDs, since this is easier. However, database-generated ints can also be used
+- An **anti-corruption layer** is used as a boundary between a bounded context and other systems (other bounded contexts, separate applications (especially legacy systems!), etc.) it needs to communicate with. It translates between the two models and may implement the [Facade](https://ilyana.dev/blog/2020-08-21-facade-pattern/) or [Adapter](https://ilyana.dev/blog/2020-08-21-adapter-pattern/) pattern.
+- Keep in mind that the UI should be considered in the domain design. The UI is part of the system, and thinking about the UI can help you think about how the rest of the system needs to fit together.
+- Eric Evans: "no model is going to be perfect"
+  - That is, don't let the perfect be the enemy of the good
+
+Summary: Key Terms
+--
+
+**Domain-Driven Design** - an approach to software engineering that focuses on the problem space (rather than the solution space, or software) in order to simplify the design and increase extensibility and maintainability.
+
+**Ubiquitous Language** - a set of terms in the language of the domain whose definitions all parties have agreed upon and understand
+
+**Bounded Context** - an area of an application where consistent behavior is expected; it should be insulated from other areas of the application.
+
+**Sub-Domain** - an independent area of the domain (problem space)
+
+**Shared Kernel** - a set of files shared between bounded contexts
+
+**Anemic Domain Model** - a domain model focused on data/state
+
+**Rich Domain Model** - a domain model focused on behavior
+
+**Entity** - an object whose identity is based on a continuity of identitity and which is not defined by its value
+
+**Value Object** - an object whose identity is defined by the values its properties
+
+**Domain Service** - operations that do not conceptually belong with an entity or domain object
+
+**Aggregate** - a set of objects which all change together in a data transaction (they should all be saved at the same time). This set includes an *Aggregate Root* which serves as a parent to and controls access to the other members of the object.
+
+**Invariant** - a rule describing what an aggregate's state must be in order to maintain a valid model
+
+**Repository** - an object responsible for persistence and data access
+
+**Domain Event** - an object that communicates and enforces an "if this-then that" relationship
+
+**Anti-Corruption Layer** - an insulating layer between a bounded context and external systems (including other bounded contexts within the same application)
+
+Sources
+--
+
+- [Best Practice - An Introduction To Domain-Driven Design](https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design) by David Laribee
+- [Domain-Driven Design Fundamentals](https://app.pluralsight.com/library/courses/domain-driven-design-fundamentals/table-of-contents) by Julie Lerman and Steve Smith on Pluralsight
+- [The Mythical Man-Month](https://ilyana.dev/blog/2020-07-21-mythical-man-month/), [The Repository Pattern](https://ilyana.dev/blog/2020-10-12-repository-pattern/), [The Facade Pattern](https://ilyana.dev/blog/2020-08-21-facade-pattern/), and [The Adapter Pattern](https://ilyana.dev/blog/2020-08-21-adapter-pattern/) from this blog
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

@@ -1,0 +1,154 @@
+---
+title: LINQ
+date: 2020-09-18T17:05:10.000Z
+tags:
+  - software development
+  - queries
+  - linq
+  - books
+---
+
+![](linq.png)
+
+LINQ stands for Language Integrated Query, is pronounced "link," and provides a strongly typed and logical syntax for querying data in C#. LINQ is a single syntax for querying many types of data sources.
+
+This post contains my notes from *Essential LINQ* by Charlie Calvert and Dinesh Kulkarni. Most example code comes directly from the book, and any prose taken from the book is in quotes.
+
+What LINQ is - "The Essence of LINQ"
+--
+
+* Integrated - "first class citizen of .NET languages"
+  * as opposed to SQL, for example, which is more complicated to write in C# and does not have the benefits of type-checking, syntax highlighting, etc. that LINQ provides
+* Unitive - a single syntax for a variety of data sources
+* Extensible - LINQ can be extended to work with other languages and data sources
+* Declarative - LINQ queries are about **what** the developer wants to do, rather than **how** that is accomplished; i.e. LINQ queries are at a higher level
+  * declarative syntax is easier to read, maintain, and scale with added complexity
+* Hierarchical - LINQ provides a good visual of data, and its syntax makes it easy to navigate hierarchical relationships
+* Composable - LINQ queries can compose and use the results of one another
+* Transformative - LINQ query results can be converted into other data sources
+
+Useful Foundational Knowledge
+--
+
+**Collection initializers** - not really part of LINQ but useful nevertheless. This line:
+
+```csharp
+List<int> list = new List<int)>() { 1, 2, 3 };
+```
+
+is the same as these lines:
+
+```csharp
+List<int> list = new List<int>();
+                 list.Add(1);
+                 list.Add(2);
+                 list.Add(3);
+```
+
+A typical **query expression** in LINQ looks like this:
+
+```csharp
+var query = from number in list
+            where number < 3
+            select number;
+```
+
+`from` is always at the beginning of a LINQ query, and the final line in a LINQ query always begins with either `select` or `group`. The `where` keyword tells the compiler which numbers are desired; in this case, those less than 3. LINQ has many operators, but the from-where-select structure is the most commonly used in LINQ queries.
+
+It is important that the `from` clause come first and the `select` clause last in order that the IDE and compiler can provide feedback based on the type of data being queried (which is established in the `from` clause).
+
+**Type inference** means using the keyword `var` to define the query, instead of declaring it as, for example, `IEnumerable<int>`. Type inference is the preferred style in order to enforce strong typing, allow LINQ to take advantage of composability, in addition to several other benefits.
+
+**Anonymous types** - when LINQ queries a collection of objects with the `new` keyword following `select`, an anonymous type is created. This is a simple class containing only the properties being queried. This anonymous type will be the type of the output of the query. It will have an automatically generated `ToString()` method that can format the output when printed. At a more basic level, anonymous types are read-only classes used when an object's type cannot be known at compile time.
+
+**Entity classes** are classes that map directly to a database table. Classes are declared entity classes via the `Table` attribute above the class declaration:
+
+```csharp
+[Table(Name = "Customers")]
+class Customer
+{
+    [Column]
+    public string attributeOne;
+    [Column]
+    public int attributeTwo;
+
+    // stuff Customer class does
+}
+```
+
+**Delegates** declare variables that reference a single method. The delegate type must have the same signature (output type, number of parameters, parameter type(s)) as the method it references. **Generic delegates** are a more flexible form of delegates, where the output and parameter types can be declared later.
+
+**Lambdas** provide a simple syntax for declaring delegates, particularly when working with LINQ. The `=>` found in a lambda expression is generally read as "goes to." A lambda declaration like this:
+
+```csharp
+Func<int, int, int> myLambda = (a, b) => (a + b);
+```
+
+is roughly equivalent to this delegate declaration:
+
+```csharp
+public static int Add(int a, int b)
+{
+    return a + b;
+}
+
+Func<int, int, int> myDelegate = Add;
+```
+
+**Concurrency control** is how an application maintains consistency in a database where multiple users may be making changes simultaneously. There are two approaches for this: pessimistic concurrency (ask permission), optimistic concurrency (ask forgiveness). LINQ to SQL relies on optimistic concurrency, as it is far more common.
+
+LINQ Clauses
+--
+
+Seven types of clauses exist in LINQ: `from`, `let`, `where`, `orderby`, `join`, `select`, and `group-by`.
+
+These clauses must be called in a specific order. The first line of a LINQ query consists of a `from` clause. The last line of a LINQ query consists of either a `select` clause or a `group-by` clause. The body of the query consists of any combination (including zero) of `from`, `let`, `where`, `orderby`, and/or `join` clauses.
+
+Sometimes a `group-by` clause may appear in the middle of a query. This creates a divide in the query; range variables from one side of the query cannot cross this divide to the other side of the query.
+
+While the `select` clause simply outputs all members of the data source (aside from those filtered out by other clauses in the query), the `group-by` clause does the same thing but avoids repeating elements which share a certain key. For example:
+
+```csharp
+
+List<animal> list = new List<animal> { cat, dog, fish, horse, cat }
+
+var query = from animal in list
+            group animal by animal.Type;
+
+foreach (var item in query)
+{
+    Console.WriteLine(item.Key)
+}
+```
+
+Now, this code prints "cat" only once, even though there are two cats in the list.
+
+LINQ Nomenclature
+--
+
+**computation** or **result sequence** - the result of a LINQ query
+
+**projection** - the part following `select` in a select clause
+
+**range variables** - the variable introduced in a `from` clause, which need not be formally declared since its type is inferred. The range variable in the following query is `word`:
+
+```csharp
+var query = from word in list
+            select word;
+```
+
+A range variable's type *can* be explicitly declared when necessary, but this should be avoided.
+
+LINQ to SQL
+--
+
+"LINQ to SQL lets developers access relational data as strongly typed objects by translating LINQ to SQL."
+
+Essentially, LINQ provides a means of accessing SQL from C# (or another language that supports LINQ) and gives the benefits of object-oriented programming and strong typing to SQL queries. Thus, C# developers need not embed their SQL queries in string literals.
+
+One last note
+--
+
+* Visual Studio provides the Object Relational Designer, which helps with mapping tables to classes
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).

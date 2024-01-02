@@ -1,0 +1,60 @@
+---
+title: The Decorator Pattern
+date: 2020-08-10T04:04:10.000Z
+tags:
+  - software development
+  - coding
+  - pluralsight
+  - design patterns
+---
+
+![](decorator-pattern.png)
+
+The Decorator Pattern is a design pattern that allows object functionality to be modified at runtime without violating the Open-Closed Principle and is in many situations a good alternative to subclassing.
+
+*Head First Design Patterns* by Eric Freeman and Elisabeth Freeman provides an excellent explanation of the Decorator Pattern in its third chapter.
+
+Pluralsight's [Design Patterns Library](https://app.pluralsight.com/library/courses/patterns-library/table-of-contents) course also has a great module on the Decorator Pattern from Brian Lagunas, where he clearly explains the use of the Decorator Pattern.
+
+While inheritance is good for extending objects' functionality at design time, composition provides a way to modify an object's responsibilities at runtime, and the Decorator Pattern demonstrates how this can be accomplished.
+
+The Decorator Pattern? What's that?
+--
+
+Imagine the glorious day that quarantine lifts for good (after the efforts of millions of everyday people wearing masks and social distancing, and scientists around the world working to develop effective vaccines - **wear a mask everyone!**) and you are free to go wherever you want without fear of catching or spreading COVID-19. The world is wide open to you. Where do you go?
+
+How about a nice coffee shop? Or a deli? Or a pizzeria? How about all three?
+
+First, the coffee shop. You order a medium mocha with extra whipped cream. Huh, I wonder how the coffee shop accounts for all the different possible drinks without an explosion of classes? `SmallMocha`, `MediumMocha`, `LargeMocha`, `SmallMochaExtraWhip`, `MediumMochaExtraWhip`... wow, that would be a real mess! Something to think about as you sip your coffee.
+
+Now, let's stop at the deli for lunch. You'll order a club sandwich on wheat bread with extra bacon and mayo on the side. Delicious! But think of all the classes the deli's software must have! With all the different kinds of sandwiches, that's probably an even bigger mess than the coffee shop's software.
+
+And what about the pizza place where you stop for dinner? You'll order one large pizza. But your kids like cheese pizza and you like supreme, so you'll get the pizza half and half, but with no olives and extra cheese.
+
+As you pay you begin to think about that mess in the software again. This pizza shop must have that problem too. So you ask the cashier about it. And she says, "Oh, no, that's not a problem for us - we use the Decorator Pattern. It lets us modify our pizza objects at runtime, so we don't need classes like `LargePizzaExtraCheeseSupremeOnHalf`!"
+
+As it turns out, the coffee shop and the deli also use the Decorator Pattern. Let's find out how it works.
+
+How to use the Decorator Pattern
+--
+
+In each of our three examples, the store needs to perform the same operations on each of its products. The biggest one that comes to mind is a calculation of cost. The coffee shop charges a little extra for the extra whipped cream, and the pizza shop charges differently based on the pizza's size and number of toppings.
+
+However, as demonstrated above, using a subclass of the abstract class `Coffee` or `Sandwich` or `Pizza` for each variation would be an absolute nightmare. Instead, they use the Decorator Pattern. Several concrete component base variations will inherit from each class. `Mocha` and `Club` and `SupremePizza`, for example.
+
+Next, an abstract decorator class inherits from each of the abstract superclasses. It has to inherit from the super class because the decorator objects have to have the same type as the objects they're decorating. Finally, various concrete decorator classes describing modifications (`ExtraWhip`, `MayoOnTheSide`, `Large`) inherit from the abstract decorator class. Each of these decorator classes *has* a member of the abstract superclass. This is the object which it decorates.
+
+Now, each of your orders can be neatly wrapped up and the costs elegantly calculated:
+
+A `Medium` object *has* an `ExtraWhip` object which *has* a `Mocha`. When the software calls the outermost decorator's `CalculateCost()` (the `Medium`), that outermost class calls the `CalculateCost()` of the object which it decorates (`ExtraWhip`) and multiplies that by say 1.2. i.e. the `Medium` object *delegates* the `CalculateCost()` method to the object which it decorates. The `ExtraWhip` object now calls the `CalculateCost()` of the `Mocha` object which it wraps, then adds say $0.10. Finally, the `Mocha` returns the base cost of a mocha.
+
+The same process can be followed for your club sandwich or half-supreme pizza.
+
+Conclusion
+--
+
+The Decorator Pattern is a very useful pattern in the right situation. Legacy systems lend themselves especially well to this pattern. It is also very useful when working with sealed classes.
+
+The Decorator Pattern's mechanism of action is quite elegant. It reminds me a little bit of recursion, as well as the [Builder Pattern](https://ilyana.dev/blog/2020-07-21-builder-pattern/).
+
+Thanks for reading! I hope you find this and other articles here at ilyanaDev helpful! Be sure to follow me on Twitter [@ilyanaDev](https://twitter.com/ilyanaDev).
