@@ -94,7 +94,7 @@ const config: GatsbyConfig = {
               query: { allPost: IAllPost; site: { siteMetadata: ISiteMetadata } }
             }) =>
               allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug
+                const url = site.siteMetadata.siteUrl + "/blog" + post.contentFilePath
                 const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
 
                 return {
